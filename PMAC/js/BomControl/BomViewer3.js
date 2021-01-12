@@ -55,7 +55,7 @@ showPopupDataViewer.addEventListener('click', function () {
                 updateChart(site);
                 updateTable();
             }
-        }, (60000 * 30))
+        }, 1800000)
 
         isFirstLoad = true;
     }
