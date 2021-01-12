@@ -187,126 +187,163 @@ function CheckIsDisplay(channelid) {
 //Charts
 function drawChartDataViewer(siteId, start, end) {
     let channels = []
+    let start1 = GetUnixStartDate();
+    let end1 = GetUnixEndDate();
+    var url = urlGetMonitoringChannelDataBySite + siteId + "&start=" + start1 + "&end=" + end1;
 
-    am4core.ready(function () {
-        let start = GetUnixStartDate();
-        let end = GetUnixEndDate();
-        var url = urlGetMonitoringChannelDataBySite + siteId + "&start=" + start + "&end=" + end;
-
-        axios.get(url).then(function (res) {
-            let tempData = res.data;
-            if (tempData.length != 0) {
-                let max = tempData[0].length;
-                let index = 0;
-                for (let i = 0; i < tempData.length; i++) {
-                    if (max < tempData[i]) {
-                        max = tempData[i].length;
-                        index = i;
-                    }
-                    if (tempData[i][0] != undefined) {
-                        channels.push(tempData[i][0].ChannelID);
-                    }
+    axios.get(url).then(function (res) {
+        let tempData = res.data;
+        if (tempData.length != 0) {
+            let max = tempData[0].length;
+            let index = 0;
+            for (let i = 0; i < tempData.length; i++) {
+                if (max < tempData[i]) {
+                    max = tempData[i].length;
+                    index = i;
                 }
-
-                let dataForChart = [];
-                for (let i = 0; i < max; i++) {
-                    let obj = {};
-                    obj.TimeStamp = ConverDate(tempData[index][i].TimeStamp);
-                    for (let j = 0; j < tempData.length; j++) {
-                        if (tempData[j].length != 0) {
-                            try {
-                                if (tempData[j][i].Value != null && tempData[j][i].Value != undefined) {
-                                    obj[`${tempData[j][i].ChannelID}`] = tempData[j][i].Value;
-                                }
-                            }
-                            catch (err) {
-                                obj[`${tempData[j][i].ChannelID}`] = 0;
-                            }
-                        }
-                    }
-                    dataForChart.push(obj);
-
+                if (tempData[i][0] != undefined) {
+                    channels.push(tempData[i][0].ChannelID);
                 }
-                // Themes begin
-                am4core.useTheme(am4themes_animated);
-                // Themes end
-
-                dataForChart.sort(function (a, b) { return a.TimeStamp.getTime() - b.TimeStamp.getTime() });
-
-                // Create chart instance
-                chart2 = am4core.create("chart_canvas", am4charts.XYChart);
-
-                let tempDataForCreateTable = [...dataForChart];
-
-                firstDataChart = [...dataForChart];
-
-                dataUpdateChart = [...dataForChart];
-
-                // Add data
-                chart2.data = dataForChart;
-
-                // Create axes
-                var dateAxis = chart2.xAxes.push(new am4charts.DateAxis());
-                dateAxis.renderer.grid.template.location = 0;
-                dateAxis.renderer.labels.template.fill = am4core.color("#e59165");
-
-                var valueAxis = chart2.yAxes.push(new am4charts.ValueAxis());
-
-                let color = ["#55efc4", "#81ecec", "#74b9ff", "#00b894", "#00cec9", "#0984e3", "#fab1a0", "#fd79a8", "#fdcb6e"]
-                let iColor = 0;
-
-                // Create series
-                for (let channel of channels) {
-
-                    var series = chart2.series.push(new am4charts.LineSeries());
-                    series.dataFields.dateX = "TimeStamp";
-                    series.dataFields.valueY = `${channel}`;
-                    series.name = `${channel}`;
-                    series.id = `${channel}`
-                    series.legendSettings.labelText = "{name}";
-                    series.legendSettings.valueText = "{valueY.close}";
-                    series.legendSettings.itemValueText = "[bold]{valueY}[/bold]";
-                    series.stroke = am4core.color(color[iColor])
-                    iColor++;
-
-                    var bullet = series.bullets.push(new am4charts.Bullet());
-                    bullet.tooltipText = "{dateX.formatDate('dd/MM/yyyy')} Name: {name} Value: {valueY}";
-
-                    // Add scrollbar
-                    chart2.scrollbarX = new am4charts.XYChartScrollbar();
-                    chart2.scrollbarX.series.push(series);
-                }
-
-                chart2.legend = new am4charts.Legend();
-                chart2.legend.markers.template.disabled = true;
-                chart2.legend.labels.template.text = "[bold {color}]{name}[/]";
-
-                // Add cursor
-                chart2.cursor = new am4charts.XYCursor();
-                chart2.cursor.xAxis = dateAxis;
-
-                if (chart2 != null && chart2 != undefined) {
-                    for (let channel of channels) {
-                        if (listChannel.indexOf(channel) == -1) {
-                            let series = chart2.map.getKey(channel);
-                            series.hide();
-                        }
-                    }
-                }
-
-                chart2.logo.disabled = true;
-                updateTable(listChannel.length, tempDataForCreateTable);
             }
-        })
+
+            let dataForChart = [];
+            for (let i = 0; i < max; i++) {
+                let obj = {};
+                obj.TimeStamp = ConverDate(tempData[index][i].TimeStamp);
+                for (let j = 0; j < tempData.length; j++) {
+                    if (tempData[j].length != 0) {
+                        try {
+                            if (tempData[j][i].Value != null && tempData[j][i].Value != undefined) {
+                                obj[`${tempData[j][i].ChannelID}`] = tempData[j][i].Value;
+                            }
+                        }
+                        catch (err) {
+                            obj[`${tempData[j][i].ChannelID}`] = 0;
+                        }
+                    }
+                }
+                dataForChart.push(obj);
+
+            }
+
+            dataForChart.sort(function (a, b) { return a.TimeStamp.getTime() - b.TimeStamp.getTime() });
+
+
+            let tempDataForCreateTable = [...dataForChart];
+
+            firstDataChart = [...dataForChart];
+
+            dataUpdateChart = [...dataForChart];
+
+            chart2 = new AmCharts.AmSerialChart();
+            chart2.pathToImages = "../../js/amcharts/images/";
+            chart2.dataProvider = dataForChart;
+            chart2.categoryField = "TimeStamp";
+            chart2.balloon.bulletSize = 5;
+            //ZOOM
+            chart2.addListener("dataUpdated", zoomChart2);
+            //AXES
+            //X
+            var categoryAxis = chart2.categoryAxis;
+            categoryAxis.parseDates = true;
+            categoryAxis.minPeriod = "mm";
+            categoryAxis.dashLength = 1;
+            categoryAxis.minorGridEnabled = true;
+            categoryAxis.twoLineMode = true;
+            categoryAxis.dateFormats = [{
+                period: 'fff',
+                format: 'JJ:NN:SS'
+            }, {
+                period: 'ss',
+                format: 'JJ:NN:SS'
+            }, {
+                period: 'mm',
+                format: 'JJ:NN'
+            }, {
+                period: 'hh',
+                format: 'JJ:NN'
+            }, {
+                period: 'DD',
+                format: 'DD'
+            }, {
+                period: 'WW',
+                format: 'DD'
+            }, {
+                period: 'MM',
+                format: 'YYYY'
+            }, {
+                period: 'YYYY',
+                format: 'YYYY'
+            }];
+
+            categoryAxis.axisColor = "#DADADA";
+            categoryAxis.gridAlpha = 0.15;
+            //AXE
+            //Y1
+            valueAxisPress = new AmCharts.ValueAxis();
+            valueAxisPress.axisColor = 'red';
+            valueAxisPress.axisThickness = 1;
+            valueAxisPress.titleColor = 'red';
+            chart2.addValueAxis(valueAxisPress);
+
+            //GRAPH COLOR
+            let color = ["#55efc4", "#81ecec", "#74b9ff", "#00b894", "#00cec9", "#0984e3", "#fab1a0", "#fd79a8", "#fdcb6e"]
+            let iColor = 0;
+            // GRAPH
+            for (let channel of channels) {
+                var graph = new AmCharts.AmGraph();
+                graph.id = `${channel}`;
+                graph.title = `${channel}`;
+                graph.valueAxis = valueAxisPress;
+                graph.valueField = `${channel}`;
+                graph.bullet = "round";
+                graph.bulletBorderColor = "#FFFFFF";
+                graph.bulletBorderThickness = 2;
+                graph.bulletBorderAlpha = 1;
+                graph.bulletSize = 8;
+                graph.lineThickness = 1;
+                graph.lineColor = `${color[iColor]}`;
+                graph.hideBulletsCount = 50;
+                chart2.addGraph(graph);
+                iColor++;
+            }
+
+            // CURSOR
+            var chartCursor = new AmCharts.ChartCursor();
+            chartCursor.categoryBalloonDateFormat = "MMM DD, YYYY JJ:NN";
+            chart2.addChartCursor(chartCursor);
+            // SCROLLBAR
+            var chartScrollbar = new AmCharts.ChartScrollbar();
+            chartScrollbar.autoGridCount = true;
+            chartScrollbar.scrollbarHeight = 20;
+            chart2.addChartScrollbar(chartScrollbar);
+            // LEGEND
+            var legend = new AmCharts.AmLegend();
+            legend.marginLeft = 110;
+            legend.useGraphSettings = true;
+            chart2.addLegend(legend);
+            //MOUSE
+            chart2.mouseWheelZoomEnabled = true;
+            chart2.mouseWheelScrollEnabled = true;
+            chart2.creditsPosition = "bottom-right";
+            //EXPORT
+            chart2.amExport = {
+                top: 21,
+                right: 21,
+                buttonColor: '#EFEFEF',
+                buttonRollOverColor: '#DDDDDD',
+                exportPNG: true,
+                exportJPG: true,
+                exportPDF: true,
+                exportSVG: true
+            }
+            // WRITE
+            chart2.write("chart_canvas");
+
+            updateTable(listChannel.length, tempDataForCreateTable);
+        }
     })
 };
-
-
-function zoomChart() {
-    // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
-    //chart.zoomToIndexes(chartData.length - chartData.length, chartData.length - 1);
-}
-////Charts
 
 //DataTable
 function CreateDataTable(channelLength, chartData) {
@@ -474,7 +511,7 @@ function downloadFile(output, fileName) {
 //        }
 //        bodyModal.innerHTML = content;
 //        AllowChangeCheckBox();
-//    }).catch(err => console.log(err))
+//    }).catch(err => console.log(err)) 
 //}
 
 function AllowChangeCheckBox() {
@@ -489,8 +526,14 @@ function AllowChangeCheckBox() {
                     cardElement.classList.remove('d-none');
                 }
                 if (chart2 != null && chart2 != undefined) {
-                    let series = chart2.map.getKey(checkbox.dataset.channel);
-                    series.show();
+                    for (let graph of chart2.graphs) {
+                        if (graph.id == checkbox.dataset.channel) {
+                            if (graph.hidden) {
+                                chart2.showGraph(graph);
+                            }
+                            break;
+                        }
+                    }
                 }
 
                 updateTable();
@@ -503,8 +546,14 @@ function AllowChangeCheckBox() {
                 }
 
                 if (chart2 != null && chart2 != undefined) {
-                    let series = chart2.map.getKey(checkbox.dataset.channel);
-                    series.hide();
+                    for (let graph of chart2.graphs) {
+                        if (graph.id == checkbox.dataset.channel) {
+                            if (!graph.hidden) {
+                                chart2.hideGraph(graph);
+                            }
+                            break;
+                        }
+                    }
                 }
 
 
@@ -636,7 +685,7 @@ function updateChart(siteId) {
 
             chart2.dataProvider = dataForChart;
             chart2.validateData();
-
+            chart2.validateNow();
         }
     })
 }
@@ -670,3 +719,8 @@ function updateTable() {
 
 }
 
+
+function zoomChart2() {
+    // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+    chart2.zoomToIndexes(chart2.dataProvider.length - chart2.dataProvider.length, chart2.dataProvider.length - 1);
+}

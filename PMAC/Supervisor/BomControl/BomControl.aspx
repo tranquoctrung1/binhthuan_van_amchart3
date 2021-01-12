@@ -7,6 +7,15 @@
     <link href="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="../../css/bomcontrol.css" rel="stylesheet" />
+    <script src="../../js/amcharts/amcharts.js"></script>
+    <script src="../../js/amcharts/serial.js"></script>
+    <script src="../../js/amcharts/exporting/amexport.js"></script>
+    <script src="../../js/amcharts/exporting/canvg.js"></script>
+    <script src="../../js/amcharts/exporting/filesaver.js"></script>
+    <script src="../../js/amcharts/exporting/jspdf.js"></script>
+    <script src="../../js/amcharts/exporting/jspdf.plugin.addimage.js"></script>
+    <script src="../../js/amcharts/exporting/rgbcolor.js"></script>
+    <script src="../../js/randomColor.js"></script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
