@@ -322,7 +322,7 @@
         .name-station-area .name-station span {
             text-decoration: underline;
             cursor: pointer;
-            color: #565353;
+            color: #44bd32;
             transition: .5s all ease-in-out
         }
 
@@ -330,10 +330,26 @@
                 color: #0a54ec
             }
 
-.button-history 
-{
+.button-history {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center
 }
+
+#buttonStatusConnect {
+    border: none !important;
+    padding: 9px !important;
+    border-radius: 4px !important;
+    color: white !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+}
+
+    #buttonStatusConnect.connect {
+        background: green !important;
+    }
+
+    #buttonStatusConnect.disconnect {
+        background: red !important;
+    }

@@ -78,7 +78,7 @@
                                     </div>
                                      <div class="name-station-area">
                                         <h4 class="name-station">Tên Trạm: <span data-toggle="modal" data-target="#dataViewer" id="showPopupDataViewer">V003</span></h4>
-                                          <button type="button" class="btn btn-success ml-4" disabled="disabled"  id="buttonStatusConnect">Connect</button>
+                                          <button type="button" class="ml-4 connect" disabled="disabled"  id="buttonStatusConnect">Connect</button>
                                     </div>
                                     <%--<div class="custom-control custom-switch mb-3">
                                         <label class="mb-0 mr-4"  for="switchMode">Man</label>

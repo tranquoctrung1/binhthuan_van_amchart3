@@ -1389,22 +1389,22 @@
             let now = new Date(Date.now());
 
             if (((now.getTime() / 1000) - (temp.getTime() / 1000)) >= 300) {
-                if (buttonStatusConnect.classList.contains("btn-success")) {
-                    buttonStatusConnect.classList.replace("btn-success", "btn-danger");
+                if (buttonStatusConnect.classList.contains("connect")) {
+                    buttonStatusConnect.classList.replace("connect", "disconnect");
                 }
                 buttonStatusConnect.innerHTML = "Disconnected";
             }
             // convert to disconnect
             else {
-                if (buttonStatusConnect.classList.contains("btn-danger")) {
-                    buttonStatusConnect.classList.replace("btn-danger", "btn-success");
+                if (buttonStatusConnect.classList.contains("disconnect")) {
+                    buttonStatusConnect.classList.replace("disconnect", "connect");
                 }
                 buttonStatusConnect.innerHTML = "Connected";
             }
         }
         else {
-            if (buttonStatusConnect.classList.contains("btn-success")) {
-                buttonStatusConnect.classList.replace("btn-success", "btn-danger");
+            if (buttonStatusConnect.classList.contains("connect")) {
+                buttonStatusConnect.classList.replace("connect", "disconnect");
             }
             buttonStatusConnect.innerHTML = "Disconnected";
         }
