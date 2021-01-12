@@ -1,0 +1,71 @@
+﻿html, body, form {       
+            margin: 0px;     
+            padding: 0px;     
+            height: 100%; 
+            min-height:100%
+            }
+        .gm-style-iw {
+            height: auto !important;
+            width:auto !important;
+        }
+        /*.RadWindow
+        {
+            position: fixed !important; 
+            top: auto !important;  
+            bottom: 0;
+            margin:0 auto;
+        }*/
+        #GMap1Panel{height:100%;}
+        .lblSiteName {
+        font-weight:bolder;
+        color:blue;
+        background-color:whitesmoke
+        }
+        .cellCenter, .cellLeft, .cellRight {
+
+        }
+        .cellCenter,.cellCenterLbl
+        {
+            text-align:center
+        }
+        .cellLeft{
+            text-align:left
+        }
+        .cellRight, .cellRightLbl {
+            text-align:right
+        }
+        .cellRightLbl, .cellCenterLbl {
+            font-size:small;
+            font-weight:bold;
+            background-color:black;
+            color:yellow;
+        }
+        .tblHeader
+        {
+            font-weight: bold;
+            text-align:center
+        }
+        .context_menu {
+            background-color: white;
+            border: 1px solid gray;
+        }
+        .context_menu_item {
+            padding: 3px 6px;
+        }
+        .context_menu_item:hover {
+            background-color: #CCCCCC;
+        }
+        .context_menu_separator {
+            background-color: gray;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+        }
+        .imp {
+            color: blue;
+            font-weight: bold;
+        }
+.div-fullsrc {
+    width: 100%;
+    height: 100%;
+}

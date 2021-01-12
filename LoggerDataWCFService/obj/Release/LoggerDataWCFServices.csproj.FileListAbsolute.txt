@@ -1,0 +1,46 @@
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojResolveAssemblyReference.cache
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb
+E:\bavitech\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+E:\bavitech\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+E:\bavitech\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+E:\bavitech\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojResolveAssemblyReference.cache
+E:\bavitech\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+E:\bavitech\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb
+D:\2019\Bavitech\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\2019\Bavitech\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\2019\Bavitech\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\2019\Bavitech\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\2019\Bavitech\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\2019\Bavitech\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+D:\2019\Bavitech\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb
+D:\Pi\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\Pi\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\Pi\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\Pi\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojResolveAssemblyReference.cache
+D:\Pi\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+D:\Pi\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb
+D:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb
+D:\project\Bình Thuận\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\project\Bình Thuận\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\project\Bình Thuận\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.dll
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Release\LoggerDataWCFServices.pdb

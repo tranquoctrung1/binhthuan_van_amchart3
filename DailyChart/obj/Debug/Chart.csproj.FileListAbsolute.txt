@@ -1,0 +1,4 @@
+D:\Pi\DailyChart\obj\Debug\Chart.csprojResolveAssemblyReference.cache
+D:\Pi\DailyChart\obj\Debug\App.g.cs
+D:\Pi\DailyChart\obj\Debug\MainPage.g.cs
+D:\Pi\DailyChart\obj\Debug\Chart.g.resources

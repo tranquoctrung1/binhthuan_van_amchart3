@@ -1,0 +1,48 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="_site, App_Web_20ldxmza" %>
+
+<%@ Register Src="~/_controls/_footer.ascx" TagPrefix="uc1" TagName="_footer" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="all" EnableRoundedCorners="False" />
+        <div id="container">
+            <div id="header-wrapper">
+                <div id="header">
+                    <div class="login_link">
+                        <asp:LoginName ID="LoginName1" runat="server" />
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    </div>
+                    <div id="page-name">
+                        WEBSITE DỮ LIỆU LOGGER
+                    </div>
+                    <div>
+                        <telerik:RadMenu ID="RadMenu1" runat="server" DataNavigateUrlField="Url" DataSourceID="SiteMapDataSource1" DataTextField="Title" DataValueField="Title" ></telerik:RadMenu>
+
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" SiteMapProvider="_all_sites" />
+
+                    </div>
+                </div>
+            </div>
+            <div id="content-wrapper">
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <br />
+            <uc1:_footer runat="server" ID="_footer" />
+        </div>
+    </form>
+</body>
+</html>

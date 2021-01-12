@@ -1,0 +1,339 @@
+﻿
+.bom {
+    padding: 1rem 0 !important;
+}
+
+.col-table-status {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-direction: column !important
+}
+
+.col-table-data {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important
+}
+
+.col-bom-control .box-image {
+    position: relative;
+    font-weight: bold;
+    width: 100% !important;
+}
+
+#p1Showleft {
+    position: absolute;
+    bottom: 13%;
+    left: 0%;
+}
+
+#p2Showright {
+    position: absolute;
+    bottom: 13%;
+    right: 0%
+}
+
+.col-bom-control .button-bom-control {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: .5rem !important
+}
+
+    .col-bom-control .button-bom-control button, #btnView, #showHistoryAlarm {
+        text-transform: uppercase !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+    }
+
+.col-bom-control .box-image {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+    .col-bom-control .box-image img {
+        width: 50% !important;
+    }
+
+.table {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.2) !important;
+}
+
+.table-data th, .table-status th, .table-p-w th {
+    padding: .6rem !important
+}
+
+    .table-data th span, .table-status th span, .table-p-w th span {
+        margin-right: .2rem !important
+    }
+
+#chart {
+    width: 100% !important;
+    height: 280px !important;
+    max-width: 100% !important;
+}
+
+/*animation for table status*/
+
+.table-status tbody tr.status-row-close-full.active {
+    background: green;
+    font-size: 1.1rem !important;
+    animation: anime-closeFull 2s infinite !important;
+}
+
+
+@keyframes anime-closeFull {
+    0% {
+        color: white;
+        background: green;
+    }
+
+    50% {
+        color: white;
+        background: red;
+    }
+
+    100% {
+        color: white;
+        background: green;
+    }
+}
+
+
+.table-status tbody tr.status-row-closing.active {
+    background: blue;
+    font-size: 1.1rem !important;
+    animation: anime-closing 1s infinite !important;
+}
+
+@keyframes anime-closing {
+    0% {
+        color: white;
+        background: blue;
+    }
+
+    50% {
+        color: white;
+        background: red;
+    }
+
+    100% {
+        color: white;
+        background: blue;
+    }
+}
+
+.table-status tbody tr.status-row-hold.active {
+    background: blue;
+    color: white !important;
+    font-size: 1.1rem !important;
+}
+
+.table-status tbody tr.status-row-opening.active {
+    animation: anime-opening 1s infinite !important;
+    font-size: 1.1rem !important;
+}
+
+@keyframes anime-opening {
+    0% {
+        color: white;
+        background: blue;
+    }
+
+    50% {
+        color: white;
+        background: green;
+    }
+
+    100% {
+        color: white;
+        background: blue;
+    }
+}
+
+
+.table-status tbody tr.status-row-open-full.active {
+    animation: anime-openFull 2s infinite !important;
+    font-size: 1.1rem !important;
+}
+
+@keyframes anime-openFull {
+    0% {
+        color: white;
+        background: red;
+    }
+
+    50% {
+        color: white;
+        background: green;
+    }
+
+    100% {
+        color: white;
+        background: red;
+    }
+}
+
+#controllerMode, #history, #modalViewer {
+    position: fixed !important;
+}
+
+.modal .modal-title {
+    text-transform: uppercase !important;
+    font-size: 1rem !important
+}
+
+
+#modeMan.hide {
+    display: none !important;
+}
+
+#modeAuto.hide {
+    display: none !important
+}
+
+#modeMan.show {
+    display: block !important;
+    animation: showAnimation .5s !important;
+}
+
+#modeAuto.show {
+    display: block !important;
+    animation: showAnimation .5s !important;
+}
+
+#rowErrorNumber.hide {
+    display: none !important;
+}
+
+#rowErrorNumber.show {
+    display: block !important;
+    animation: showAnimation .5s !important;
+}
+
+@keyframes showAnimation {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.modal-body .form-group {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 0 !important
+}
+
+
+#date {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important
+}
+
+.table .thead {
+    background: #74b9ff !important;
+    color: white !important
+}
+
+/*.custom-control.custom-switch
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.custom-control.custom-switch label {
+    font-weight: bold !important;
+    font-size: 1rem !important;
+}
+
+.pagination-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-item a {
+    text-decoration: none
+}
+
+/*remove css web resource*/
+.RadForm_Metro.rfdHeading h6, .RadForm_Metro.rfdHeading h5, .RadForm_Metro.rfdHeading h4 {
+    border-bottom: none !important;
+    color: inherit !important;
+}
+
+.subMenuActive {
+    background: #74b9ff !important
+}
+
+.RadForm.rfdScrollBars body::-webkit-scrollbar, .RadForm.rfdScrollBars textarea::-webkit-scrollbar, .RadForm.rfdScrollBars div::-webkit-scrollbar {
+    width: 3px !important;
+    height: 3px !important;
+}
+
+.data-chart {
+    width: 100%
+}
+
+@media (min-width: 576px) {
+    #dataViewer .modal-dialog.data-viewer {
+        width: 100% !important;
+    }
+}
+
+
+/*#listchannel.hide 
+{
+    display: none;
+    z-index: -100;
+}
+
+#listchannel.show {
+    display: block;
+    z-index: 100;
+}*/
+
+.haha {
+    height: 300px;
+    overflow: scroll;
+}
+
+.name-station-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+    .name-station-area .name-station {
+        text-align: center;
+        font-weight: bold !important;
+        font-size: 1rem !important
+    }
+
+        .name-station-area .name-station span {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #565353;
+            transition: .5s all ease-in-out
+        }
+
+            .name-station-area .name-station span:hover {
+                color: #0a54ec
+            }
+
+.button-history 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

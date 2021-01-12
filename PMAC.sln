@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PMAC", "PMAC\", "{59818693-F237-411A-B24D-46547EF1657B}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/tawaco"
+		Debug.AspNetCompiler.PhysicalPath = "PMAC\"
+		Debug.AspNetCompiler.TargetPath = "..\tawaco\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/tawaco"
+		Release.AspNetCompiler.PhysicalPath = "PMAC\"
+		Release.AspNetCompiler.TargetPath = "..\tawaco\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50402"
+		SlnRelativePath = "PMAC\"
+		DefaultWebSiteLanguage = "Visual C#"
+		ProjOutputReferences = ""
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerAlarmingService", "LoggerAlarmWindowsService\LoggerAlarmingService.csproj", "{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSViaCOMPort", "SMSViaCOMPort\SMSViaCOMPort.csproj", "{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanControllServices", "VanControllServices\VanControllServices.csproj", "{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59818693-F237-411A-B24D-46547EF1657B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59818693-F237-411A-B24D-46547EF1657B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59818693-F237-411A-B24D-46547EF1657B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{59818693-F237-411A-B24D-46547EF1657B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5000063A-8164-435A-80A5-AD4B9E55D4D8}
+	EndGlobalSection
+EndGlobal

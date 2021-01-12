@@ -1,0 +1,61 @@
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.pdb
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csprojAssemblyReference.cache
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Main.resources
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Properties.Resources.resources
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.GenerateResource.cache
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.CoreCompileInputs.cache
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.exe
+D:\2019\[WEB][TAWACO] - v1.1\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.pdb
+D:\2019\Bavitech\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+D:\2019\Bavitech\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe
+D:\2019\Bavitech\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.pdb
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csprojAssemblyReference.cache
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Main.resources
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Properties.Resources.resources
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.GenerateResource.cache
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.CoreCompileInputs.cache
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.exe
+D:\2019\Bavitech\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.pdb
+D:\Pi\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+E:\Bavitech\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+E:\Bavitech\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe
+E:\Bavitech\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.pdb
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csprojAssemblyReference.cache
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Main.resources
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Properties.Resources.resources
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.GenerateResource.cache
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.CoreCompileInputs.cache
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.exe
+E:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.pdb
+D:\Bavitech\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+D:\Bavitech\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe
+D:\Bavitech\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.pdb
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csprojAssemblyReference.cache
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Main.resources
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Properties.Resources.resources
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.GenerateResource.cache
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.CoreCompileInputs.cache
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.exe
+D:\Bavitech\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.pdb
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.pdb
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csprojAssemblyReference.cache
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Main.resources
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Properties.Resources.resources
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.GenerateResource.cache
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.CoreCompileInputs.cache
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.exe
+D:\backup\Quảng Nam\viMeter2\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.pdb
+D:\project\Bình Thuận\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe.config
+D:\project\Bình Thuận\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.exe
+D:\project\Bình Thuận\SMSViaCOMPort\bin\Debug\SMSViaCOMPort.pdb
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csprojAssemblyReference.cache
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Main.resources
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.Properties.Resources.resources
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.GenerateResource.cache
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.csproj.CoreCompileInputs.cache
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.exe
+D:\project\Bình Thuận\SMSViaCOMPort\obj\Debug\SMSViaCOMPort.pdb

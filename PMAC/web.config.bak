@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <appSettings>
+    <add key="googlemaps.subgurim.net" value="AIzaSyDuGpAhCXz4igU2klwQqRmGVNC-b1Kc_ic" />
+    <add key="gMarkerIcon" value="http://i748.photobucket.com/albums/xx123/bttrung1988/cello_16_zps4e1d4efe.png" />
+    <add key="gMarkerIconError" value="http://i748.photobucket.com/albums/xx123/bttrung1988/alram_zpsf0721f08.gif" />
+    <add key="gLatInit" value="10.749921" />
+    <add key="gLngInit" value="106.653085" />
+    <add key="gZoomInit" value="15" />
+    <add key="gZoomMinForLabel" value="15" />
+    <add key="mail" value="tawaco@gmail.com" />
+    <add key="mailPassword" value="tawaco@123" />
+    <add key="company" value="Công ty Cổ phần Cấp nước Trung An" />
+    <add key="sCompany" value="TAWACO" />
+    <add key="Telerik.Skin" value="Metro" />
+    <add key="vs:EnableBrowserLink" value="false" />
+  </appSettings>
+  <system.web>
+    <authentication mode="Forms">
+      <forms loginUrl="~/Login.aspx" slidingExpiration="true" timeout="20" />
+    </authentication>
+    <siteMap enabled="true" defaultProvider="unauthorized">
+      <!--<siteMap enabled="true" defaultProvider="_all_sites">-->
+      <providers>
+        <add name="_all_sites" description="Default SiteMap provider." type="System.Web.XmlSiteMapProvider " siteMapFile="~/_all_sites.sitemap" securityTrimmingEnabled="true" />
+        <add name="unauthorized" description="Default SiteMap provider." type="System.Web.XmlSiteMapProvider " siteMapFile="~/Web.sitemap" securityTrimmingEnabled="true" />
+        <add name="Consumer" description="Default SiteMap provider." type="System.Web.XmlSiteMapProvider " siteMapFile="~/Consumer.sitemap" securityTrimmingEnabled="true" />
+      </providers>
+    </siteMap>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <add assembly="System.Data.Entity.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <add assembly="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+      <buildProviders>
+        <add extension=".edmx" type="System.Data.Entity.Design.AspNet.EntityDesignerBuildProvider" />
+      </buildProviders>
+    </compilation>
+    <pages theme="Default" controlRenderingCompatibilityVersion="4.0">
+      <!--<pages theme="_default" controlRenderingCompatibilityVersion="4.0">-->
+      <controls>
+        <add tagPrefix="telerik" namespace="Telerik.Web.UI" assembly="Telerik.Web.UI" />
+      </controls>
+    </pages>
+    <httpHandlers>
+      <add path="ChartImage.axd" type="Telerik.Web.UI.ChartHttpHandler" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.SpellCheckHandler.axd" type="Telerik.Web.UI.SpellCheckHandler" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" validate="false" />
+      <add path="Telerik.RadUploadProgressHandler.ashx" type="Telerik.Web.UI.RadUploadProgressHandler" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" validate="false" />
+    </httpHandlers>
+    <httpModules>
+      <add name="RadUploadModule" type="Telerik.Web.UI.RadUploadHttpModule" />
+      <add name="RadCompression" type="Telerik.Web.UI.RadCompression" />
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="RadUploadModule" />
+      <add name="RadUploadModule" type="Telerik.Web.UI.RadUploadHttpModule" preCondition="integratedMode" />
+      <remove name="RadCompression" />
+      <add name="RadCompression" type="Telerik.Web.UI.RadCompression" preCondition="integratedMode" />
+    </modules>
+    <handlers>
+      <remove name="ChartImage_axd" />
+      <add name="ChartImage_axd" path="ChartImage.axd" type="Telerik.Web.UI.ChartHttpHandler" verb="*" preCondition="integratedMode" />
+      <remove name="Telerik_Web_UI_SpellCheckHandler_axd" />
+      <add name="Telerik_Web_UI_SpellCheckHandler_axd" path="Telerik.Web.UI.SpellCheckHandler.axd" type="Telerik.Web.UI.SpellCheckHandler" verb="*" preCondition="integratedMode" />
+      <remove name="Telerik_Web_UI_DialogHandler_aspx" />
+      <add name="Telerik_Web_UI_DialogHandler_aspx" path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" preCondition="integratedMode" />
+      <remove name="Telerik_RadUploadProgressHandler_ashx" />
+      <add name="Telerik_RadUploadProgressHandler_ashx" path="Telerik.RadUploadProgressHandler.ashx" type="Telerik.Web.UI.RadUploadProgressHandler" verb="*" preCondition="integratedMode" />
+      <remove name="Telerik_Web_UI_WebResource_axd" />
+      <add name="Telerik_Web_UI_WebResource_axd" path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" preCondition="integratedMode" />
+    </handlers>
+        <defaultDocument>
+            <files>
+                <add value="Login.aspx" />
+            </files>
+        </defaultDocument>
+  </system.webServer>
+  <connectionStrings>
+    <add name="DBEntities" connectionString="metadata=res://*/App_Code.DBModel.csdl|res://*/App_Code.DBModel.ssdl|res://*/App_Code.DBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost\SQL2K12;initial catalog=Bavitech;User ID=bavitech;Password=bavitech;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+    <add name="DBConnectionString" connectionString="Data Source=localhost\SQL2K12;Initial Catalog=Bavitech;User ID=bavitech;Password=bavitech" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0" />
+      </parameters>
+    </defaultConnectionFactory>
+  </entityFramework>
+  <location path="Supervisor/Logger/Alarming.aspx">
+    <system.web>
+      <authorization>
+        <allow roles="admin" />
+        <allow roles="consumer" />
+        <allow roles="staff" />
+      </authorization>
+    </system.web>
+  </location>
+</configuration>

@@ -1,0 +1,283 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Consumer_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+
+    <meta content="" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title runat="server" id="title"></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link rel="stylesheet" href="/css/vendor.css" />
+    <link rel="stylesheet" href="/css/app-blue.css" />
+    <link rel="stylesheet" href="/css/language.css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+    <%--<body onload="scrlsts();">--%>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        </telerik:RadScriptManager>
+        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server" UpdatePanelsRenderMode="Inline">
+        </telerik:RadAjaxManager>
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="All" ControlsToSkip="LoginControls" />
+        <div id="wrapper">
+            <div class="main-wrapper">
+                <div class="app" id="app">
+                    <header class="header">
+                    <div class="header-block header-block-collapse d-lg-none d-xl-none">
+                        <button class="collapse-btn" id="sidebar-collapse-btn">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+    
+                    <div class="header-block header-block-buttons">
+                        <a href="#" id="MenuCollapse">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                          <asp:Label ID="lbPageTitle" runat="server" Text="Viwater hệ thống SCADA quản lý mạng lưới cấp nước"></asp:Label>                        
+                    </div>
+
+                    <div class="header-block header-block-nav">
+                        <ul class="nav-profile">
+
+                            <%--<div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img style="height:20px;width:30px" src="../../_imgs/Language/Flag_of_England.png"/>&nbsp; En
+                              </button>
+                              <div style="margin-top=-2px" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a href="#en"><li><img style="height:20px;width:30px" src="../../_imgs/Language/Flag_of_England.png"/>English</li></a>
+                                <a href="#vi"><li><img style="height:20px;width:30px" src="../../_imgs/Language/Flag_of_Vietnam.png"/>VietNam</li></a>
+                                <a href="#others"><li><img style="height:20px;width:30px" />Other</li></a>                                
+                              </div>
+                            </div>--%>
+
+                            <asp:DropDownList ID="DropDownList_Language" runat="server"
+                                    onselectedindexchanged="DropDownList_Language_SelectedIndexChanged" AutoPostBack="true">
+                                    <asp:ListItem Text="Vietnamese" Value="vi"></asp:ListItem>
+                                    <asp:ListItem Text="English" Value="en"></asp:ListItem>
+                                    <asp:ListItem Text="Other" Value="other"></asp:ListItem>
+                                </asp:DropDownList>
+
+                            <li class="profile dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-user" style="font-size:24px"></i>
+                                    <span class="name"> 
+                                        <asp:Label ID="lbUserName" runat="server" Text="User's name"></asp:Label>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1">                                                     
+                                    <a class="dropdown-item" href="/Consumer/Account/ChangePassword.aspx">
+                                        <i class="fa fa-gear icon"></i> 
+                                        <asp:Label ID="lbChangePassword" runat="server" Text="Đổi Mật Khẩu"></asp:Label>                    
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" id="btnLogout" href="#">
+                                        <i class="fa fa-power-off icon"></i> Logout </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                    <aside class="sidebar">
+                    <div class="sidebar-container">
+                        <div class="sidebar-header">
+                            <div class="brand">
+                                <img src="#" alt="Smiley face" height="25" width="45" runat="server" id="imgLogo">
+                                 <asp:Label ID="lbCompany" runat="server" Text="TAWACO"></asp:Label> </div>
+                        </div>
+                   
+                    <nav class="menu">
+                            <ul class="sidebar-menu metismenu" id="sidebar-menu">
+                                <li>
+                                    <a href="/Consumer/Logger/MapJS_rev1.aspx" id="lnkMapJS" runat="server">
+                                        <i class="fa fa-home"></i> 
+                                        <asp:Label ID="lbGeneralMap" runat="server" Text="Bản Đồ"></asp:Label>                    
+                                    </a>
+                                </li>
+                                <li>
+                                            <a href="/Consumer/Logger/Complex.aspx"> 
+                                                <asp:Label ID="lbDataTable" runat="server" Text="Bảng Giá Trị"></asp:Label>                    
+                                            </a>
+                                        </li>
+                                
+                                <li>
+                                            <a href="/Consumer/Logger/Daily_Monthly.aspx"> 
+                                                <asp:Label ID="lbLoggerData" runat="server" Text="Dữ Liệu Logger"></asp:Label>                     
+
+                                            </a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </nav>
+
+
+                        <asp:HiddenField ID="hidListMenu" runat="server" />
+                    </div>
+                    
+                </aside>
+                    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+                    <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
+                    <div class="mobile-menu-handle"></div>
+                    <article class="content dashboard-page">
+                    <section class="section">
+                        <div class="row">
+                            
+                            <div class="col col-12 col-sm-12 col-md-12 col-xl-12 history-col">
+                                <div class="card sameheight-item" data-exclude="xs" id="dashboard-history">
+                                    
+                                    <div class="card-block">
+                                        <div class="tab-content">
+                                            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                        
+                </article>
+
+                    <footer class="footer" id="Inside-bottom">
+                    
+                    <div class="footer_text">
+                        
+                                Copyright @ 2018 by <a href="http://bavitech.com">Bavitech Corporation</a>
+                            
+                        
+                    </div>
+                </footer>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+    <script type="text/javascript" src="/js/Pi-solution/vendor.js"></script>
+    <script type="text/javascript" src="/js/Pi-solution/app.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("li").click(function () {
+                if ($("li").hasClass('active')) {
+                    $("li").removeClass('active');
+                }
+                $(this).addClass('active');
+            });
+
+            setInterval(function () { $(".rwControlButtons").css("width", "auto"); }, 100);
+
+            $("#btnLogout").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/Pi-solution/Pi1.asmx/Logout_pi",
+                    data: "{}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        window.location.href = result.d;
+                    },
+                    error: function (error) {
+                        alert("The system is under maintenance. Please come back later");
+                    }
+                });
+            });
+            // active when click menu
+            var pathname = window.location.pathname;
+            $(".sidebar-nav a").each(function () {
+                if ($(this).attr("href") == pathname) {
+                    $(this).addClass("subMenuActive");
+                    $(this).parent().parent().parent().addClass("open active");
+                    $(this).closest("ul").attr("aria-expanded", "true");
+                    $(this).closest("ul").removeClass("collapse");
+                    $(this).closest("ul").addClass("sidebar-nav collapse in");
+                }
+                //privilege sub menu
+
+                var substring = '@' + $(this).attr("href") + '@';
+                if ($("#hidListMenu").val().indexOf(substring) == -1) {
+
+                    $(this).parent().attr("style", "display:none !important");
+                }
+            });
+
+
+
+            //active when click menu
+            $(".sidebar-menu a").each(function () {
+                if ($(this).attr("href") == pathname) {
+                    $(this).parent().addClass("open active");
+                }
+            });
+
+            $(".rfdRoundedCorners, .form-control").each(function () {
+                $(this).removeClass("rfdDecorated");
+            });
+
+
+            $(".rwControlButtons, .rbDecorated").each(function () {
+                $(this).removeAttr("style");
+                $(this).parent().removeClass("rfdSkinnedButton");
+
+            });
+            $(".rfdDecorated").each(function () {
+                $(this).parent().removeClass("rfdSkinnedButton");
+
+            });
+            //resize menu + map by screen
+            var screenheight = $(document).height();
+            var screenwidth = $(document).width();
+            var strh = (screenheight - 60);
+            var strw = (screenwidth - 220);
+            if (screenwidth < 768) {
+                strw = (screenwidth - 20);
+                //change header text 
+                $("#<%=lbPageTitle.ClientID%>").html("VIWATER SCADA SYSTEM");
+            }
+
+            $("#MenuCollapse").click(function () {
+                $(".sidebar").toggle(500);
+                $(".header").toggleClass('headerHide');
+                $(".app").toggleClass('headerHide');
+            });
+            $('#sidebar-collapse-btn2').click(function () {
+                $("#app").toggleClass("sidebar-open");
+                return false;
+            });
+
+        var myElement = $('#Inside-bottom');
+        myElement.css({
+            position: 'absolute',
+            left: '50%',
+            'margin-left': 0 - (myElement.width() / 2)
+        });
+
+        })
+    </script>
+
+
+</body>
+</html>
+
+

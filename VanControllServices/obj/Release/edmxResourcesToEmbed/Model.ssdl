@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="binhthuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="t_TakeChangeHistory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ValveID" Type="char" MaxLength="50" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="UserTake" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="IsNotified" Type="bit" />
+  </EntityType>
+  <EntityType Name="t_Valve_Setting">
+    <Key>
+      <PropertyRef Name="ValveID" />
+    </Key>
+    <Property Name="ValveID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ValveTag" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value" Type="float" />
+    <Property Name="Flag" Type="bit" />
+  </EntityType>
+  <EntityType Name="t_Valve_Status">
+    <Key>
+      <PropertyRef Name="ValveID" />
+    </Key>
+    <Property Name="ValveID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="float" />
+    <Property Name="Alarm" Type="float" />
+    <Property Name="Mode" Type="float" />
+    <Property Name="P1" Type="float" />
+    <Property Name="P2" Type="float" />
+    <Property Name="P2set" Type="float" />
+    <Property Name="Solar" Type="float" />
+    <Property Name="Acquy" Type="float" />
+    <Property Name="Temp" Type="float" />
+    <Property Name="Humidity" Type="float" />
+    <Property Name="A0" Type="float" />
+    <Property Name="A1" Type="float" />
+    <Property Name="A2" Type="float" />
+    <Property Name="A3" Type="float" />
+    <Property Name="A4" Type="float" />
+    <Property Name="A5" Type="float" />
+    <Property Name="A6" Type="float" />
+    <Property Name="A7" Type="float" />
+    <Property Name="A8" Type="float" />
+    <Property Name="A9" Type="float" />
+    <Property Name="A10" Type="float" />
+    <Property Name="A11" Type="float" />
+    <Property Name="A12" Type="float" />
+    <Property Name="A13" Type="float" />
+    <Property Name="A14" Type="float" />
+    <Property Name="A15" Type="float" />
+    <Property Name="A16" Type="float" />
+    <Property Name="A17" Type="float" />
+    <Property Name="A18" Type="float" />
+    <Property Name="A19" Type="float" />
+    <Property Name="A20" Type="float" />
+    <Property Name="A21" Type="float" />
+    <Property Name="A22" Type="float" />
+    <Property Name="A23" Type="float" />
+    <Property Name="M0" Type="float" />
+    <Property Name="SS" Type="float" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <Function Name="p_Calculate_One_Site_Hourly_Output" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SiteId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Start" Type="datetime" Mode="In" />
+    <Parameter Name="End" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="p_Get_Data_ChannelID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="channelid" Type="nvarchar" Mode="In" />
+    <Parameter Name="start" Type="datetime" Mode="In" />
+    <Parameter Name="end" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="p_Get_DateTime_Data_Exists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="channelid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="p_GetDataCardSite" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChannelID" Type="nvarchar" Mode="In" />
+    <Parameter Name="start" Type="datetime" Mode="In" />
+    <Parameter Name="end" Type="datetime" Mode="In" />
+    <Parameter Name="siteid" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="binhthuanModelStoreContainer">
+    <EntitySet Name="t_TakeChangeHistory" EntityType="Self.t_TakeChangeHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_Valve_Setting" EntityType="Self.t_Valve_Setting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_Valve_Status" EntityType="Self.t_Valve_Status" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

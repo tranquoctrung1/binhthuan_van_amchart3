@@ -1,0 +1,6 @@
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerAlarmWindowsService\bin\Release\LoggerAlarmWindowsService.exe.config
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerAlarmWindowsService\obj\Release\LoggerAlarmWindowsService.csprojResolveAssemblyReference.cache
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerAlarmWindowsService\bin\Release\LoggerAlarmWindowsService.exe
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerAlarmWindowsService\bin\Release\LoggerAlarmWindowsService.pdb
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerAlarmWindowsService\obj\Release\LoggerAlarmWindowsService.exe
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerAlarmWindowsService\obj\Release\LoggerAlarmWindowsService.pdb

@@ -1,0 +1,57 @@
+D:\2019\[WEB][TAWACO] - v1.1\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csprojAssemblyReference.cache
+D:\2019\[WEB][TAWACO] - v1.1\LoggerAlarmWindowsService\obj\Debug\WindowsService.WindowsServiceInstaller.resources
+D:\2019\[WEB][TAWACO] - v1.1\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.GenerateResource.cache
+D:\2019\[WEB][TAWACO] - v1.1\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.CoreCompileInputs.cache
+D:\2019\[WEB][TAWACO] - v1.1\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe
+D:\2019\[WEB][TAWACO] - v1.1\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.pdb
+D:\2019\Bavitech\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csprojAssemblyReference.cache
+D:\2019\Bavitech\LoggerAlarmWindowsService\obj\Debug\WindowsService.WindowsServiceInstaller.resources
+D:\2019\Bavitech\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.GenerateResource.cache
+D:\2019\Bavitech\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.CoreCompileInputs.cache
+D:\2019\Bavitech\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe
+D:\2019\Bavitech\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.pdb
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csprojAssemblyReference.cache
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\WindowsService.WindowsServiceInstaller.resources
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.GenerateResource.cache
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.CoreCompileInputs.cache
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.pdb
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe.config
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe.manifest
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.application
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.pdb
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe.manifest
+E:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.application
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe.config
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe.manifest
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.application
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.pdb
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csprojAssemblyReference.cache
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\WindowsService.WindowsServiceInstaller.resources
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.GenerateResource.cache
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.CoreCompileInputs.cache
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe.manifest
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.application
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe
+D:\Bavitech\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe.config
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe.manifest
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.application
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.exe
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\bin\Debug\LoggerAlarmingService.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csprojAssemblyReference.cache
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\WindowsService.WindowsServiceInstaller.resources
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.GenerateResource.cache
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.CoreCompileInputs.cache
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe.manifest
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.application
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe
+D:\backup\Quảng Nam\viMeter2\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.pdb
+D:\project\Bình Thuận\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csprojAssemblyReference.cache
+D:\project\Bình Thuận\LoggerAlarmWindowsService\obj\Debug\WindowsService.WindowsServiceInstaller.resources
+D:\project\Bình Thuận\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.GenerateResource.cache
+D:\project\Bình Thuận\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.csproj.CoreCompileInputs.cache
+D:\project\Bình Thuận\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.exe
+D:\project\Bình Thuận\LoggerAlarmWindowsService\obj\Debug\LoggerAlarmingService.pdb

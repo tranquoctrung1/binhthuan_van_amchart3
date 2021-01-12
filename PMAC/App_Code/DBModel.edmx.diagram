@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d2cf36e1a1214c108c8c634e920db522" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="DBModel.t_Accreditation_Types" Width="1.5" PointX="6" PointY="36.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Accreditations" Width="1.5" PointX="8.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Channel_Configurations" Width="1.5" PointX="11.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Consumers" Width="1.5" PointX="6" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Data_Complexes" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Data_Raw_Indexes" Width="1.5" PointX="10.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_DisplayGroups" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Emails" Width="1.5" PointX="2.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Logger_Configurations" Width="1.5" PointX="6" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Logger_Files" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Logger_Histories" Width="1.5" PointX="8.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Loggers" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Meter_Files" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Meter_Histories" Width="1.5" PointX="5.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Meters" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Roles" Width="1.5" PointX="9" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Site_Availabilities" Width="1.5" PointX="6" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Site_Files" Width="1.5" PointX="10.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Site_Status" Width="1.5" PointX="6" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Sites" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Staffs" Width="1.5" PointX="9" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Transmitter_Files" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Transmitter_Histories" Width="1.5" PointX="5.25" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Transmitters" Width="1.5" PointX="3" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Units" Width="1.5" PointX="9" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.t_Users" Width="1.5" PointX="11.25" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.FK_t_Accreditations_t_Accreditation_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Accreditations_t_Meters" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Accreditations_t_Transmitters" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Channel_Configurations_t_Logger_Configurations" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Channel_Configurations_t_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Consumers" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Users_t_Consumers" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Data_Complexes_t_Logger_Configurations" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Data_Raw_Indexes_t_Sites" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_DisplayGroups1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Logger_Configurations" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Logger_Files_t_Loggers" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Logger_Histories_t_Loggers2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Logger_Histories_t_Sites" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Loggers" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Meter_Files_t_Meters" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Meter_Histories_t_Meters2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Meters" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Users_t_Roles1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Site_Availabilities" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Site_Files_t_Sites" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Site_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Sites_t_Transmitters" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Users_t_Staffs" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Transmitter_Files_t_Transmitters" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_t_Transmitter_Histories_t_Transmitters" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBModel.t_Function" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModel.t_Language" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DBModel.t_LanguageTranslate" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DBModel.t_SysParam" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModel.t_RoleFunction" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModel.t_Device_Status" Width="1.5" PointX="12.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

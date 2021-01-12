@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="binhthuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="t_TakeChangeHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ValveID" Type="char" MaxLength="50" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="UserTake" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+          <Property Name="IsNotified" Type="bit" />
+        </EntityType>
+        <EntityType Name="t_Valve_Setting">
+          <Key>
+            <PropertyRef Name="ValveID" />
+          </Key>
+          <Property Name="ValveID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ValveTag" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value" Type="float" />
+          <Property Name="Flag" Type="bit" />
+        </EntityType>
+        <EntityType Name="t_Valve_Status">
+          <Key>
+            <PropertyRef Name="ValveID" />
+          </Key>
+          <Property Name="ValveID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="float" />
+          <Property Name="Alarm" Type="float" />
+          <Property Name="Mode" Type="float" />
+          <Property Name="P1" Type="float" />
+          <Property Name="P2" Type="float" />
+          <Property Name="P2set" Type="float" />
+          <Property Name="Solar" Type="float" />
+          <Property Name="Acquy" Type="float" />
+          <Property Name="Temp" Type="float" />
+          <Property Name="Humidity" Type="float" />
+          <Property Name="A0" Type="float" />
+          <Property Name="A1" Type="float" />
+          <Property Name="A2" Type="float" />
+          <Property Name="A3" Type="float" />
+          <Property Name="A4" Type="float" />
+          <Property Name="A5" Type="float" />
+          <Property Name="A6" Type="float" />
+          <Property Name="A7" Type="float" />
+          <Property Name="A8" Type="float" />
+          <Property Name="A9" Type="float" />
+          <Property Name="A10" Type="float" />
+          <Property Name="A11" Type="float" />
+          <Property Name="A12" Type="float" />
+          <Property Name="A13" Type="float" />
+          <Property Name="A14" Type="float" />
+          <Property Name="A15" Type="float" />
+          <Property Name="A16" Type="float" />
+          <Property Name="A17" Type="float" />
+          <Property Name="A18" Type="float" />
+          <Property Name="A19" Type="float" />
+          <Property Name="A20" Type="float" />
+          <Property Name="A21" Type="float" />
+          <Property Name="A22" Type="float" />
+          <Property Name="A23" Type="float" />
+          <Property Name="M0" Type="float" />
+          <Property Name="SS" Type="float" />
+          <Property Name="TimeStamp" Type="datetime" />
+        </EntityType>
+        <Function Name="p_Calculate_One_Site_Hourly_Output" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SiteId" Type="nvarchar" Mode="In" />
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="End" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="p_Get_Data_ChannelID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="channelid" Type="nvarchar" Mode="In" />
+          <Parameter Name="start" Type="datetime" Mode="In" />
+          <Parameter Name="end" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="p_Get_DateTime_Data_Exists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="channelid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="p_GetDataCardSite" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ChannelID" Type="nvarchar" Mode="In" />
+          <Parameter Name="start" Type="datetime" Mode="In" />
+          <Parameter Name="end" Type="datetime" Mode="In" />
+          <Parameter Name="siteid" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="binhthuanModelStoreContainer">
+          <EntitySet Name="t_TakeChangeHistory" EntityType="Self.t_TakeChangeHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_Valve_Setting" EntityType="Self.t_Valve_Setting" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_Valve_Status" EntityType="Self.t_Valve_Status" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="binhthuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="t_TakeChangeHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ValveID" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="UserTake" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="IsNotified" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="binhthuanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t_TakeChangeHistory" EntityType="Self.t_TakeChangeHistory" />
+          <FunctionImport Name="p_Calculate_One_Site_Hourly_Output">
+            <Parameter Name="SiteId" Mode="In" Type="String" />
+            <Parameter Name="Start" Mode="In" Type="DateTime" />
+            <Parameter Name="End" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="p_Get_Data_ChannelID" ReturnType="Collection(binhthuanModel.p_Get_Data_ChannelID_Result)">
+            <Parameter Name="channelid" Mode="In" Type="String" />
+            <Parameter Name="start" Mode="In" Type="DateTime" />
+            <Parameter Name="end" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="p_Get_DateTime_Data_Exists" ReturnType="Collection(DateTime)">
+          <Parameter Name="channelid" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="t_Valve_Status" EntityType="binhthuanModel.t_Valve_Status" />
+          <EntitySet Name="t_Valve_Setting" EntityType="binhthuanModel.t_Valve_Setting" />
+          <FunctionImport Name="p_GetDataCardSite">
+            <Parameter Name="ChannelID" Mode="In" Type="String" />
+            <Parameter Name="start" Mode="In" Type="DateTime" />
+            <Parameter Name="end" Mode="In" Type="DateTime" />
+            <Parameter Name="siteid" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="p_Get_Data_ChannelID_Result">
+          <Property Type="DateTime" Name="TimeStamp" Nullable="true" Precision="23" />
+          <Property Type="Double" Name="Value" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="t_Valve_Status">
+          <Key>
+            <PropertyRef Name="ValveID" />
+          </Key>
+          <Property Name="ValveID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Double" />
+          <Property Name="Alarm" Type="Double" />
+          <Property Name="Mode" Type="Double" />
+          <Property Name="P1" Type="Double" />
+          <Property Name="P2" Type="Double" />
+          <Property Name="P2set" Type="Double" />
+          <Property Name="Solar" Type="Double" />
+          <Property Name="Acquy" Type="Double" />
+          <Property Name="Temp" Type="Double" />
+          <Property Name="Humidity" Type="Double" />
+          <Property Name="A0" Type="Double" />
+          <Property Name="A1" Type="Double" />
+          <Property Name="A2" Type="Double" />
+          <Property Name="A3" Type="Double" />
+          <Property Name="A4" Type="Double" />
+          <Property Name="A5" Type="Double" />
+          <Property Name="A6" Type="Double" />
+          <Property Name="A7" Type="Double" />
+          <Property Name="A8" Type="Double" />
+          <Property Name="A9" Type="Double" />
+          <Property Name="A10" Type="Double" />
+          <Property Name="A11" Type="Double" />
+          <Property Name="A12" Type="Double" />
+          <Property Name="A13" Type="Double" />
+          <Property Name="A14" Type="Double" />
+          <Property Name="A15" Type="Double" />
+          <Property Name="A16" Type="Double" />
+          <Property Name="A17" Type="Double" />
+          <Property Name="A18" Type="Double" />
+          <Property Name="A19" Type="Double" />
+          <Property Name="A20" Type="Double" />
+          <Property Name="A21" Type="Double" />
+          <Property Name="A22" Type="Double" />
+          <Property Name="A23" Type="Double" />
+          <Property Name="M0" Type="Double" />
+          <Property Name="SS" Type="Double" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="t_Valve_Setting">
+          <Key>
+            <PropertyRef Name="ValveID" />
+          </Key>
+          <Property Name="ValveID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValveTag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="Double" />
+          <Property Name="Flag" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="binhthuanModelStoreContainer" CdmEntityContainer="binhthuanEntities">
+          <EntitySetMapping Name="t_TakeChangeHistory">
+            <EntityTypeMapping TypeName="binhthuanModel.t_TakeChangeHistory">
+              <MappingFragment StoreEntitySet="t_TakeChangeHistory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ValveID" ColumnName="ValveID" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UserTake" ColumnName="UserTake" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="p_Calculate_One_Site_Hourly_Output" FunctionName="binhthuanModel.Store.p_Calculate_One_Site_Hourly_Output" />
+          <FunctionImportMapping FunctionImportName="p_Get_Data_ChannelID" FunctionName="binhthuanModel.Store.p_Get_Data_ChannelID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="binhthuanModel.p_Get_Data_ChannelID_Result">
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="p_Get_DateTime_Data_Exists" FunctionName="binhthuanModel.Store.p_Get_DateTime_Data_Exists" />
+          <EntitySetMapping Name="t_Valve_Status">
+            <EntityTypeMapping TypeName="binhthuanModel.t_Valve_Status">
+              <MappingFragment StoreEntitySet="t_Valve_Status">
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="SS" ColumnName="SS" />
+                <ScalarProperty Name="M0" ColumnName="M0" />
+                <ScalarProperty Name="A23" ColumnName="A23" />
+                <ScalarProperty Name="A22" ColumnName="A22" />
+                <ScalarProperty Name="A21" ColumnName="A21" />
+                <ScalarProperty Name="A20" ColumnName="A20" />
+                <ScalarProperty Name="A19" ColumnName="A19" />
+                <ScalarProperty Name="A18" ColumnName="A18" />
+                <ScalarProperty Name="A17" ColumnName="A17" />
+                <ScalarProperty Name="A16" ColumnName="A16" />
+                <ScalarProperty Name="A15" ColumnName="A15" />
+                <ScalarProperty Name="A14" ColumnName="A14" />
+                <ScalarProperty Name="A13" ColumnName="A13" />
+                <ScalarProperty Name="A12" ColumnName="A12" />
+                <ScalarProperty Name="A11" ColumnName="A11" />
+                <ScalarProperty Name="A10" ColumnName="A10" />
+                <ScalarProperty Name="A9" ColumnName="A9" />
+                <ScalarProperty Name="A8" ColumnName="A8" />
+                <ScalarProperty Name="A7" ColumnName="A7" />
+                <ScalarProperty Name="A6" ColumnName="A6" />
+                <ScalarProperty Name="A5" ColumnName="A5" />
+                <ScalarProperty Name="A4" ColumnName="A4" />
+                <ScalarProperty Name="A3" ColumnName="A3" />
+                <ScalarProperty Name="A2" ColumnName="A2" />
+                <ScalarProperty Name="A1" ColumnName="A1" />
+                <ScalarProperty Name="A0" ColumnName="A0" />
+                <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+                <ScalarProperty Name="Temp" ColumnName="Temp" />
+                <ScalarProperty Name="Acquy" ColumnName="Acquy" />
+                <ScalarProperty Name="Solar" ColumnName="Solar" />
+                <ScalarProperty Name="P2set" ColumnName="P2set" />
+                <ScalarProperty Name="P2" ColumnName="P2" />
+                <ScalarProperty Name="P1" ColumnName="P1" />
+                <ScalarProperty Name="Mode" ColumnName="Mode" />
+                <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ValveID" ColumnName="ValveID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_Valve_Setting">
+            <EntityTypeMapping TypeName="binhthuanModel.t_Valve_Setting">
+              <MappingFragment StoreEntitySet="t_Valve_Setting">
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="ValveTag" ColumnName="ValveTag" />
+                <ScalarProperty Name="ValveID" ColumnName="ValveID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="p_GetDataCardSite" FunctionName="binhthuanModel.Store.p_GetDataCardSite" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

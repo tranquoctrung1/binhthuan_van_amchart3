@@ -1,0 +1,20 @@
+at+cpin?->check sim(read,error)
+at+cusd=1,"*101#"->check money
+at+cmgf=1
+at+cmgl="all"->real sms
+at+cpms="mt,sm,me"->chon vung data luu sms(mt:sim va tb, sm:sim, me:tb)
+at+cmgd=1,4: delete all
+at+cmgw="+84975002519",145,"sto sent" :ghi sms vao vung nho
+at+cmgs="0975002519" send sms
+3488/QD-TDC
+https://www.c-sharpcorner.com/UploadFile/9f0ae2/Asp-Net-bind-dropdownlist-with-images/
+ <telerik:GridBoundColumn HeaderStyle-Width="120px" DataField="TimeStamp"  AllowSorting="true" DataFormatString="{0:yyyy-MM-dd HH:mm}"  HeaderText="Date" SortExpression="TimeStamp"
+                        UniqueName="TimeStamp">
+                        <ColumnValidationSettings EnableRequiredFieldValidation="true">
+                            <RequiredFieldValidator ForeColor="Red" Text="*This field is required" Display="Dynamic">
+                            </RequiredFieldValidator>
+                        </ColumnValidationSettings>
+                                               
+                    </telerik:GridBoundColumn>
+
+

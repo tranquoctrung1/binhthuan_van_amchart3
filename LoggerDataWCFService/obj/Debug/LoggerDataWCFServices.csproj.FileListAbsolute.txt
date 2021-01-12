@@ -1,0 +1,61 @@
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\2019\[WEB][TAWACO] - v1.1\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\2019\Bavitech\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\2019\Bavitech\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\2019\Bavitech\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\2019\Bavitech\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\2019\Bavitech\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\2019\Bavitech\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\2019\Bavitech\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\Pi\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\Pi\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\Pi\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\Pi\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojResolveAssemblyReference.cache
+D:\Pi\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\Pi\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\viMeter\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\viMeter\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\viMeter\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\viMeter\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\viMeter\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\viMeter\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojResolveAssemblyReference.cache
+E:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+E:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+E:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+E:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+E:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+E:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+E:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\Bavitech\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\Bavitech\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\backup\Quảng Nam\viMeter2\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\project\Phu Ninh\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\project\Phu Ninh\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\project\Phu Ninh\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\project\Phu Ninh\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\project\Phu Ninh\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\project\Phu Ninh\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\project\Phu Ninh\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb
+D:\project\Bình Thuận\LoggerDataWCFService\bin\LoggerDataWCFServices.dll.config
+D:\project\Bình Thuận\LoggerDataWCFService\bin\LoggerDataWCFServices.dll
+D:\project\Bình Thuận\LoggerDataWCFService\bin\LoggerDataWCFServices.pdb
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csprojAssemblyReference.cache
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.csproj.CoreCompileInputs.cache
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.dll
+D:\project\Bình Thuận\LoggerDataWCFService\obj\Debug\LoggerDataWCFServices.pdb

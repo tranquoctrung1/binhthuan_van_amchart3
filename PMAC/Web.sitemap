@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="" roles="admin">
+      <siteMapNode url="~/Supervisor/Logger/MapJS_rev1.aspx" title="Bản đồ tổng thể" description="" roles="admin"></siteMapNode>
+      <siteMapNode url="~/Supervisor/Logger/MapJS_rev1_DMA.aspx" title="Bản đồ DMA" description="" roles="admin"></siteMapNode>
+
+      <siteMapNode url="~/Supervisor/Logger/Daily_Monthly.aspx#" title="Dữ liệu" description="" roles="admin">
+        <siteMapNode url="~/Supervisor/Logger/Complex_TA.aspx" title="Bảng giá trị" description="" roles="admin"></siteMapNode>
+        <siteMapNode url="~/Supervisor/Logger/Daily_Monthly.aspx" title="Dữ liệu logger" description="" roles="admin"></siteMapNode>
+        <!--<siteMapNode url="~/Supervisor/Logger/Daily.aspx" title="Logger - Dữ liệu ngày" description="" roles="admin"></siteMapNode>
+        <siteMapNode url="~/Supervisor/Logger/Monthly.aspx" title="Logger - Dữ liệu tháng" description="" roles="admin"></siteMapNode>-->
+        <siteMapNode url="~/Supervisor/ManualData/Add_Change.aspx" title="Dữ liệu nhập tay" description="" roles="admin" />
+        <!--<siteMapNode url="~/Supervisor/ManualData/Add.aspx" title="Nhập tay chỉ số" description="" roles="admin" />
+        <siteMapNode url="~/Supervisor/ManualData/Change.aspx" title="Sửa dữ liệu nhập tay" description="" roles="admin" />-->
+        <siteMapNode url="~/Supervisor/Logger/MinMaxVal.aspx" title="Giá trị Min Max" description="" roles="admin" />
+      </siteMapNode>
+      <siteMapNode url=""  title="Báo cáo" description="" roles="admin">
+        <siteMapNode url="~/Supervisor/BomControl/BomControl.aspx" title="Bơm V001" description="" roles="admin"></siteMapNode>
+      </siteMapNode>
+		<siteMapNode url=""  title="Điều Khiển Bơm" description="" roles="admin">
+			<siteMapNode url="~/Supervisor/Report/Press.aspx" title="Áp lực" description="" roles="admin"></siteMapNode>
+			<siteMapNode url="~/Supervisor/Report/Montly.aspx"  title="Sản lượng" description="" roles="admin"/>
+		</siteMapNode>
+      <siteMapNode url="~/Supervisor/Device/All.aspx#"  title="T/bị và V/trí lắp đặt" description="" roles="admin">
+        <siteMapNode url="~/Supervisor/Device/All.aspx" title="Thiết bị" description="" roles="admin">
+          <!--<siteMapNode url="~/Supervisor/Summary/Device.aspx" title="Thống kê" description="" roles="admin"/>-->
+        </siteMapNode>
+        <siteMapNode url="~/Supervisor/Site/Config.aspx" title="Điểm lắp đặt" description="" roles="admin">
+          <!--<siteMapNode url="~/Supervisor/Summary/Site.aspx" title="Thống kê" description="" roles="admin"/>
+          <siteMapNode url="~/Supervisor/Site/ChangeDevice.aspx" title="Thay thiết bị"  description="" roles="admin"/>-->
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/Supervisor/Account/ChangePassword.aspx" title="Đổi mật khẩu" description="" roles="admin"></siteMapNode>
+      <siteMapNode url="~/Supervisor/Admin/ViewUsers.aspx#" title="Admin panel" description="" roles="admin">
+        <siteMapNode url="~/Supervisor/Admin/ViewUsers.aspx" title="Xem người dùng" description="" roles="admin"></siteMapNode>
+        <siteMapNode url="~/Supervisor/Admin/CreateUser.aspx" title="Tạo mới người dùng" description="" roles="admin" ></siteMapNode>
+        <siteMapNode url="~/Supervisor/Admin/SettingSMS.aspx" title="Cài đặt tin nhắn" description="" roles="admin" ></siteMapNode>
+      </siteMapNode>        
+    </siteMapNode>
+</siteMap>

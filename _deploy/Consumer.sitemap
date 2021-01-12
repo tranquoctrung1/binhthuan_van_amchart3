@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="" roles="consumer,staff">
+        <siteMapNode url="~/Consumer/Logger/Map.aspx" title="Bản đồ" description="" roles="consumer, staff">
+        </siteMapNode>
+      <siteMapNode url="~/Consumer/Logger/Complex.aspx" title="Bảng giá trị" description="" roles="staff"></siteMapNode>
+        <siteMapNode title="Dữ liệu logger" url="~/Consumer/Logger/Daily_Monthy.aspx" description="" roles="staff">
+            <!--<siteMapNode url="~/Consumer/Logger/Daily.aspx" title="Dữ liệu ngày" description="" roles="admin, consumer,staff"/>
+            <siteMapNode url="~/Consumer/Logger/Monthly.aspx" title="Dữ liệu tháng" description="" roles="admin, consumer, staff"/>-->
+        </siteMapNode>
+        <siteMapNode url="~/Consumer/Account/ChangePassword.aspx" title="Đổi mật khẩu" description="" roles="consumer,staff"/>
+    </siteMapNode>
+</siteMap>

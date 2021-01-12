@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title runat="server" id="title"></title>
+    <%--<script type="text/javascript" language="javascript">
+        var scrl = " Công ty CP Đầu tư xây dựng và Kinh doanh nước sạch Viwaco ";
+        function scrlsts() {
+            scrl = scrl.substring(1, scrl.length) + scrl.substring(0, 1);
+            document.title = scrl;
+            setTimeout("scrlsts()", 300);
+        }
+    </script>--%>
+    <style type="text/css">
+        body{
+        /*background:url("App_Themes/Default/water.png") #fff no-repeat;*/
+        /*background-position:center;*/
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<%--<body onload="scrlsts();">--%>
+    <body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+    <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
+    </telerik:RadAjaxManager>
+        <telerik:RadFormDecorator ID="RadFormDecorator1" runat="server" DecoratedControls="All" />
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

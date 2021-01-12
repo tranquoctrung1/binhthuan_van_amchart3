@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="binhthuanModelStoreContainer" CdmEntityContainer="binhthuanEntities">
+    <EntitySetMapping Name="t_TakeChangeHistory">
+      <EntityTypeMapping TypeName="binhthuanModel.t_TakeChangeHistory">
+        <MappingFragment StoreEntitySet="t_TakeChangeHistory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ValveID" ColumnName="ValveID" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserTake" ColumnName="UserTake" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="p_Calculate_One_Site_Hourly_Output" FunctionName="binhthuanModel.Store.p_Calculate_One_Site_Hourly_Output" />
+    <FunctionImportMapping FunctionImportName="p_Get_Data_ChannelID" FunctionName="binhthuanModel.Store.p_Get_Data_ChannelID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="binhthuanModel.p_Get_Data_ChannelID_Result">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="p_Get_DateTime_Data_Exists" FunctionName="binhthuanModel.Store.p_Get_DateTime_Data_Exists" />
+    <EntitySetMapping Name="t_Valve_Status">
+      <EntityTypeMapping TypeName="binhthuanModel.t_Valve_Status">
+        <MappingFragment StoreEntitySet="t_Valve_Status">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="SS" ColumnName="SS" />
+          <ScalarProperty Name="M0" ColumnName="M0" />
+          <ScalarProperty Name="A23" ColumnName="A23" />
+          <ScalarProperty Name="A22" ColumnName="A22" />
+          <ScalarProperty Name="A21" ColumnName="A21" />
+          <ScalarProperty Name="A20" ColumnName="A20" />
+          <ScalarProperty Name="A19" ColumnName="A19" />
+          <ScalarProperty Name="A18" ColumnName="A18" />
+          <ScalarProperty Name="A17" ColumnName="A17" />
+          <ScalarProperty Name="A16" ColumnName="A16" />
+          <ScalarProperty Name="A15" ColumnName="A15" />
+          <ScalarProperty Name="A14" ColumnName="A14" />
+          <ScalarProperty Name="A13" ColumnName="A13" />
+          <ScalarProperty Name="A12" ColumnName="A12" />
+          <ScalarProperty Name="A11" ColumnName="A11" />
+          <ScalarProperty Name="A10" ColumnName="A10" />
+          <ScalarProperty Name="A9" ColumnName="A9" />
+          <ScalarProperty Name="A8" ColumnName="A8" />
+          <ScalarProperty Name="A7" ColumnName="A7" />
+          <ScalarProperty Name="A6" ColumnName="A6" />
+          <ScalarProperty Name="A5" ColumnName="A5" />
+          <ScalarProperty Name="A4" ColumnName="A4" />
+          <ScalarProperty Name="A3" ColumnName="A3" />
+          <ScalarProperty Name="A2" ColumnName="A2" />
+          <ScalarProperty Name="A1" ColumnName="A1" />
+          <ScalarProperty Name="A0" ColumnName="A0" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="Acquy" ColumnName="Acquy" />
+          <ScalarProperty Name="Solar" ColumnName="Solar" />
+          <ScalarProperty Name="P2set" ColumnName="P2set" />
+          <ScalarProperty Name="P2" ColumnName="P2" />
+          <ScalarProperty Name="P1" ColumnName="P1" />
+          <ScalarProperty Name="Mode" ColumnName="Mode" />
+          <ScalarProperty Name="Alarm" ColumnName="Alarm" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ValveID" ColumnName="ValveID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_Valve_Setting">
+      <EntityTypeMapping TypeName="binhthuanModel.t_Valve_Setting">
+        <MappingFragment StoreEntitySet="t_Valve_Setting">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ValveTag" ColumnName="ValveTag" />
+          <ScalarProperty Name="ValveID" ColumnName="ValveID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="p_GetDataCardSite" FunctionName="binhthuanModel.Store.p_GetDataCardSite" />
+  </EntityContainerMapping>
+</Mapping>

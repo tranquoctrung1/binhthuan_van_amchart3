@@ -1,0 +1,6 @@
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFService.dll.config
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFService.dll
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\bin\LoggerDataWCFService.pdb
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFService.csprojResolveAssemblyReference.cache
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFService.dll
+D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\LoggerDataWCFService\obj\Release\LoggerDataWCFService.pdb
