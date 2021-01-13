@@ -45,6 +45,7 @@
     let rowErrorNumber = document.getElementById('rowErrorNumber');
     let timeToSendData = document.getElementById('timeToSenData');
     let buttonStatusConnect = document.getElementById('buttonStatusConnect');
+    let imageStatusValve = document.getElementById('imageStatusValve');
 
     // variables to show a0-a23 
     let psetShow = document.getElementById('psetShow');
@@ -135,6 +136,8 @@
     let originH23;
     //let originSwitchmode;
 
+    let currStatus = -1;
+
     // variable to change mode into device and database
     //let switchManAuto = document.getElementById('switchMode');
     // for server
@@ -170,6 +173,7 @@
                 FillHostoryAlarmTable();
                 fillDataTimeSend(valve.TimeStamp);
                 setStatusConnect(valve.TimeStamp);
+                reloadImageStatusValve(valve.Status);
                 if (isLoadingChart == false) {
                     drawChart(valve.ValveID.trim());
                     isLoadingChart = true;
@@ -1410,4 +1414,27 @@
         }
     }
 
+    function reloadImageStatusValve(status) {
+
+        if (currStatus.toString() != status.toString()) {
+            if (status.toString() == "0") {
+                imageStatusValve.src = "../../_imgs/notDePressureValve.gif";
+            }
+            else if (status.toString() == "1") {
+                imageStatusValve.src = "../../_imgs/closingValve.gif";
+            }
+            else if (status.toString() == "2") {
+                imageStatusValve.src = "../../_imgs/hold.jpg";
+            }
+            else if (status.toString() == "3") {
+                imageStatusValve.src = "../../_imgs/openingValve.gif";
+            }
+            else if (status.toString() == "4") {
+                imageStatusValve.src = "../../_imgs/notPressureValve.gif";
+            }
+
+            currStatus = status;
+        }
+
+    }
 })

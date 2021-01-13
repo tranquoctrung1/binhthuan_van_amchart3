@@ -95,7 +95,7 @@
                                         <label class="custom-control-label" for="switchMode">Auto</label>
                                     </div>--%>
                                     <div class="box-image">
-                                        <img src="../../_imgs/bom.png" />
+                                        <img src="../../_imgs/hold.jpg" id="imageStatusValve"/>
                                         <div id="p1Showleft">
                                             <span>P1</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="p1Show">2.0</a>
                                         </div>
@@ -150,7 +150,8 @@
                                             </div>
                                         </div>
                                         <hr />
-                                        <div id="rowErrorNumber">
+                                        <div>
+                                             <div id="rowErrorNumber">
                                              <h5 class="modal-title text-center mb-2">Thông Tin Chỉ Số</h5>
                                             <div class="form-group row"  >
                                                 <label for="errorNum" class="col-sm-2 col-form-label col-form-label-sm">Sai Số</label>
@@ -399,6 +400,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        </div>
+                                       
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>

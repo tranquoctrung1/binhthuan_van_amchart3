@@ -97,7 +97,7 @@
                                         <label class="custom-control-label" for="switchMode">Auto</label>
                                     </div>--%>
                                     <div class="box-image">
-                                        <img src="../../_imgs/bom.png" />
+                                         <img src="../../_imgs/hold.jpg" id="imageStatusValve"/>
                                         <div id="p1Showleft">
                                             <span>P1</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="p1Show">2.0</a>
                                         </div>
