@@ -69,8 +69,10 @@ public class Pi1 : System.Web.Services.WebService
             if (dbUser.Role == "consumer" || dbUser.Role == "staff" )
             {
                 message = string.Format("Consumer/Logger/MapJS_rev1.aspx?uid={0}", user.Username);
-               
-                
+            }
+            else if(dbUser.Role == "vanviewer")
+            {
+                message = string.Format("VanViewer/BomControl/BomControl.aspx");
             }
             else
             {                
