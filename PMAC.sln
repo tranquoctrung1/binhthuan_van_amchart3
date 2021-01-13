@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSViaCOMPort", "SMSViaCOMP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanControllServices", "VanControllServices\VanControllServices.csproj", "{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerDataWCFServices", "..\Phu Ninh\LoggerDataWCFService\LoggerDataWCFServices.csproj", "{2B654784-1E7F-401D-B724-AEDAD36693B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

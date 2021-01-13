@@ -3,6 +3,7 @@ let showPopupDataViewer = document.getElementById('showPopupDataViewer');
 var chart2;
 var url;
 var table;
+// unstable and can modify name channel or add new channel 
 var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Solar", "Temp"];
 var hostname = window.location.origin;
 if (hostname.indexOf("localhost") < 0)
@@ -685,7 +686,7 @@ function updateChart(siteId) {
 
             }
 
-
+            // sort data for render chart (need)
             dataForChart.sort(function (a, b) { return a.TimeStamp.getTime() - b.TimeStamp.getTime() });
 
             dataUpdateChart = [...dataForChart];

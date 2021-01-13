@@ -728,6 +728,14 @@
                                         //anchor: new google.maps.Point(-6, 45)
                                     };
 
+                                    var img_van =
+                                    {
+                                        url: '../../App_Themes/bom.png',
+                                        size: new google.maps.Size(30, 30),
+                                        origin: new google.maps.Point(0, 0),
+                                        //anchor: new google.maps.Point(-6, 45)
+                                    }
+
                                     var chart;
                                     var end;
                                     var start;
@@ -822,10 +830,6 @@
                                                     dLabelHtml = '';
                                                     dInfoHtml = '';
 
-
-
-
-
                                                     $.each(dc.GetChannelsResult, function (j, c) {
                                                         //ICON
                                                         if (c.Press1 == true || c.Press2 == true) {
@@ -846,6 +850,10 @@
                                                                     img = image_nor;
                                                                     break;
                                                             }
+                                                        }
+
+                                                        if (c.ChannelId[0] === "V") {
+                                                            img = img_van;
                                                         }
                                                         
                                                         //TREEVIEW CHANNEL NODE
@@ -901,7 +909,9 @@
                                                     infoHtml += dInfoHtml;
                                                     //infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartFlow('" + s.LoggerId + "');\">Total Flow</a></td></tr>"
                                                     //infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartMNF('" + s.LoggerId + "','" + s.BaseLine + "');\">MinMax Flow Day</a></td></tr>"
-                                                    infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartMinMaxPre('" + s.LoggerId + "');\">MinMax Pressure Day</a></td></tr>"
+                                                    if (s.LoggerId != "V") {
+                                                        infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartMinMaxPre('" + s.LoggerId + "');\">MinMax Pressure Day</a></td></tr>"
+                                                    }
 
                                                         + '</table>';
                                                     //LOAD TO MAP
@@ -1004,6 +1014,11 @@
                                                                 break;
                                                         }
                                                     }
+
+                                                    if (c.ChannelId[0] === "V") {
+                                                        img = img_van;
+                                                    }
+
                                                     //MAP INFOWINDOW CONTENT
                                                     if (c.LastIndex != null && c.LastIndex != 'undefined') {
                                                         index -= c.LastIndex;
@@ -1051,7 +1066,9 @@
                                                 infoHtml += dInfoHtml;
                                                 //infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartFlow('" + s.LoggerId + "');\">Total Flow</a></td></tr>"
                                                 //infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartMNF('" + s.LoggerId + "','" + s.BaseLine + "');\">MinMax Flow Day</a></td></tr>"
-                                                infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartMinMaxPre('" + s.LoggerId + "');\">MinMax Pressure Day</a></td></tr>"
+                                                if (s.LoggerId[0] != "V") {
+                                                    infoHtml += "<tr><td><a href=\"#\" onclick=\"openChartMinMaxPre('" + s.LoggerId + "');\">MinMax Pressure Day</a></td></tr>"
+                                                }
 
                                                     + '</table>';
                                                 //LOAD TO MAP
@@ -1404,10 +1421,12 @@
                                         var cDtEnd = $find("<%=radDateTimePickerEnd.ClientID %>");
                                         cDtStart.set_selectedDate(start);
                                         cDtEnd.set_selectedDate(end);
-                                        start = toOADate(start);
-                                        end = toOADate(end);
-                                        start = start.toString().replace('.', '_');
-                                        end = end.toString().replace('.', '_');
+                                        if (channelId[0] != "V") {
+                                            start = toOADate(start);
+                                            end = toOADate(end);
+                                            start = start.toString().replace('.', '_');
+                                            end = end.toString().replace('.', '_');
+                                        }
                                         console.log(start);
                                         console.log(end);
                                         var channel = { id: channelId, namePath: namePath, unit: unit };
@@ -1437,7 +1456,20 @@
                                     }
 
                                     function drawChart(channel, start, end) {
-                                        var url = urlGetChannelData + channel.id + "/" + start + "/" + end;
+                                        var url;
+                                        if (channel.id[0] === "V") {
+                                            console.log(channel.id)
+                                            let urlHostNameVan = `http://localhost:61403/api/datachart`;
+
+                                            start = Math.ceil(start.getTime() / 1000);
+                                            end = Math.ceil(end.getTime() / 1000);
+
+                                            url = `${urlHostNameVan}/${channel.id}/${start}/${end}`;
+                                        }
+                                        else {
+                                            url = urlGetChannelData + channel.id + "/" + start + "/" + end;
+                                        }
+                                        console.log(url)
                                         $.getJSON(url, function (d) {
                                             chartData = [];
                                             $.each(d.GetChannelDataResult, function (i, val) {
