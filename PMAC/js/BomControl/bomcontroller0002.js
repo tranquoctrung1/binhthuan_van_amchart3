@@ -46,6 +46,8 @@
     let timeToSendData = document.getElementById('timeToSenData');
     let buttonStatusConnect = document.getElementById('buttonStatusConnect');
     let imageStatusValve = document.getElementById('imageStatusValve');
+    let loadingForMode = document.getElementById('loadingForMode');
+    let bodyMode = document.getElementById('bodyMode');
 
     // variables to show a0-a23 
     let psetShow = document.getElementById('psetShow');
@@ -1321,6 +1323,40 @@
                         //writeApi(ValveID.trim(), "Man_Auto", true);
                         //writeApiToDevice(ValveID.trim(), ip, port, "Man_Auto", 1);
                         writeApi(ValveID.trim(), "Man_Auto", "1");
+                        if (loadingForMode.classList.contains('hide')) {
+                            loadingForMode.classList.remove('hide');
+                            loadingForMode.classList.add('show');
+                        }
+                        else {
+                            loadingForMode.classList.add('show');
+                        }
+                        if (bodyMode.classList.contains('show')) {
+                            bodyMode.classList.remove('show');
+                            bodyMode.classList.add('hide');
+                        }
+                        else {
+                            bodyMode.classList.add('hide');
+                        }
+
+
+                        setTimeout(function () {
+                            if (loadingForMode.classList.contains('show')) {
+                                loadingForMode.classList.remove('show');
+                                loadingForMode.classList.add('hide');
+                            }
+                            else {
+                                loadingForMode.classList.add('hide');
+                            }
+
+                            if (bodyMode.classList.contains('hide')) {
+                                bodyMode.classList.remove('hide');
+                                bodyMode.classList.add('show');
+                            }
+                            else {
+                                bodyMode.classList.add('show');
+                            }
+                        }, 3000)
+
                     }
                     else if (e.target.value == 0) {
                         //modeAuto.classList.remove('show');
@@ -1335,6 +1371,40 @@
                         //writeApi(ValveID.trim(), "Man_Auto", true);
                         //writeApiToDevice(ValveID.trim(), ip, port, "Man_Auto", 0);
                         writeApi(ValveID.trim(), "Man_Auto", "0");
+
+                        if (loadingForMode.classList.contains('hide')) {
+                            loadingForMode.classList.remove('hide');
+                            loadingForMode.classList.add('show');
+                        }
+                        else {
+                            loadingForMode.classList.add('show');
+                        }
+                        if (bodyMode.classList.contains('show')) {
+                            bodyMode.classList.remove('show');
+                            bodyMode.classList.add('hide');
+                        }
+                        else {
+                            bodyMode.classList.add('hide');
+                        }
+
+
+                        setTimeout(function () {
+                            if (loadingForMode.classList.contains('show')) {
+                                loadingForMode.classList.remove('show');
+                                loadingForMode.classList.add('hide');
+                            }
+                            else {
+                                loadingForMode.classList.add('hide');
+                            }
+
+                            if (bodyMode.classList.contains('hide')) {
+                                bodyMode.classList.remove('hide');
+                                bodyMode.classList.add('show');
+                            }
+                            else {
+                                bodyMode.classList.add('show');
+                            }
+                        }, 3000)
                     }
                     else {
                         //modeMan.classList.remove('show');

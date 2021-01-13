@@ -353,3 +353,35 @@
     #buttonStatusConnect.disconnect {
         background: red !important;
     }
+
+#loadingForMode.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    #loadingForMode .box-img-loading-mode {
+        width: 60px;
+    }
+
+#loadingForMode .box-img-loading-mode img 
+{
+    width: 100%;
+}
+
+
+#loadingForMode.hide 
+{
+    display: none
+}
+
+#bodyMode.show 
+{
+    display: block;
+}
+
+#bodyMode.hide 
+{
+    display: none;
+}

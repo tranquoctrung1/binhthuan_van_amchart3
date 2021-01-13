@@ -153,7 +153,14 @@
                                             </div>
                                         </div>
                                         <hr />
-                                        <div id="rowErrorNumber">
+                                         <div id="loadingForMode" class="hide">
+                                            <div class="box-img-loading-mode">
+                                                <img src="../../_imgs/loading.gif" alt="loading for wait" />
+
+                                            </div>
+                                        </div>
+                                        <div id="bodyMode" class="show">
+                                            <div id="rowErrorNumber">
                                              <h5 class="modal-title text-center mb-2">Thông Tin Chỉ Số</h5>
                                             <div class="form-group row"  >
                                                 <label for="errorNum" class="col-sm-2 col-form-label col-form-label-sm">Sai Số</label>
@@ -402,6 +409,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        </div>
+                                        
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
