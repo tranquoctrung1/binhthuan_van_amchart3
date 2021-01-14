@@ -3,11 +3,13 @@ let chart;
 // fucntion draw chart to
 async function drawChart(deviceName) {
 
-    let hostname = window.location.origin;
-    if (hostname.indexOf("localhost") < 0)
-        hostname = hostname + "/VanServices";
-    else
-        hostname = "http://localhost:61403";
+    //let hostname = window.location.origin;
+    //if (hostname.indexOf("localhost") < 0)
+    //    hostname = hostname + "/VanServices";
+    //else
+    //    hostname = "http://localhost:61403";
+
+    let hostname = 'http://117.2.130.229:3341/';
 
     let urlGetTimeExistData = `${hostname}/api/charttime/`; // add channelID
     let urlGetChartData = `${hostname}/api/datachart/`; // add channnelID, start time and end time
@@ -202,11 +204,13 @@ async function drawChart(deviceName) {
 // function draw chart when click view button
 async function drawChartWithTime(deviceName, start, end) {
 
-    let hostname = window.location.origin;
-    if (hostname.indexOf("localhost") < 0)
-        hostname = hostname + '/VanServices';
-    else
-        hostname = "http://localhost:61403";
+    //let hostname = window.location.origin;
+    //if (hostname.indexOf("localhost") < 0)
+    //    hostname = hostname + '/VanServices';
+    //else
+    //    hostname = "http://localhost:61403";
+
+    let hostname = 'http://117.2.130.229:3341/';
 
     let urlGetChartData = `${hostname}/api/datachart/`; // add channnelID, start time and end time
 
@@ -377,11 +381,13 @@ async function updateDataChart(deviceName, start, end) {
     // for server
     //let hostname = 'http://112.78.4.162:9999'
 
-    let hostname = window.location.origin;
-    if (hostname.indexOf("localhost") < 0)
-        hostname = hostname + "/VanServices";
-    else
-        hostname = "http://localhost:61403";
+    //let hostname = window.location.origin;
+    //if (hostname.indexOf("localhost") < 0)
+    //    hostname = hostname + "/VanServices";
+    //else
+    //    hostname = "http://localhost:61403";
+
+    let hostname = 'http://117.2.130.229:3341/';
 
     let urlGetChartData = `${hostname}/api/datachart/`; // add channnelID, start time and end time
 

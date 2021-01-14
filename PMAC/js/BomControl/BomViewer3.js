@@ -5,11 +5,13 @@ var url;
 var table;
 // unstable and can modify name channel or add new channel 
 var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Solar", "Temp"];
-var hostname = window.location.origin;
-if (hostname.indexOf("localhost") < 0)
-    hostname = hostname + "/AdamServices/";
-else
-    hostname = "http://localhost:61403";
+//var hostname = window.location.origin;
+//if (hostname.indexOf("localhost") < 0)
+//    hostname = hostname + "/AdamServices/";
+//else
+//    hostname = "http://localhost:61403";
+
+let hostname = 'http://117.2.130.229:3341/';
 
 var urlGetMonitoringCardInfos = hostname + '/api/vansite/?valveId=';
 var urlGetMonitoringChannelDataBySite = hostname + '/api/getdatachartviewer/?valveId=';
@@ -338,6 +340,14 @@ function drawChartDataViewer(siteId, start, end) {
                 exportSVG: true
             }
             // WRITE
+
+            for (let graph of chart2.graphs) {
+                if (listChannel.indexOf(graph.id) == -1) {
+                    if (!graph.hidden) {
+                        chart2.hideGraph(graph);
+                    }
+                }
+            }
             chart2.write("chart_canvas");
 
             updateTable(listChannel.length, tempDataForCreateTable);

@@ -147,11 +147,13 @@
 
     // for iis local
 
-    var hostname = window.location.origin;
-    if (hostname.indexOf("localhost") < 0)
-        hostname = hostname + "/VanServices";
-    else
-        hostname = "http://localhost:61403";
+    //var hostname = window.location.origin;
+    //if (hostname.indexOf("localhost") < 0)
+    //    hostname = hostname + "/VanServices";
+    //else
+    //    hostname = "http://localhost:61403";
+
+    let hostname = 'http://117.2.130.229:3341/';
 
     let urlGetStatusValveById = `${hostname}/api/t_valve_status/V003`; // add ValveID 
     //let urlSettingValveById = `${hostname}/api/t_valve_setting/V001`; // add valveID

@@ -1557,7 +1557,7 @@
                                         var url;
                                         if (channel.id[0] === "V") {
                                             console.log(channel.id)
-                                            let urlHostNameVan = `http://localhost:61403/api/datachart`;
+                                            let urlHostNameVan = `http://117.2.130.229:3341/api/datachart`;
 
                                             start = Math.ceil(start.getTime() / 1000);
                                             end = Math.ceil(end.getTime() / 1000);
@@ -1572,7 +1572,6 @@
 
 
                                         
-                                        chartData.push(obj);
                                         console.log(url)
                                         $.getJSON(url, function (d) {
                                             chartData = [];

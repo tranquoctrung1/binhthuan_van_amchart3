@@ -108,6 +108,12 @@
             <li class="control_grid_2_columns">
                 <asp:RadioButton ID="rdoIsShowLable" runat="server" GroupName="isShowMap" />
             </li>
+             <li class="text_grid_2_columns">
+                <asp:Label ID="winAddChannel_notShowLable" runat="server" Text=" Không hiển thị trên map"></asp:Label>:
+            </li>
+            <li class="control_grid_2_columns">
+                <asp:RadioButton ID="rdonotShowLable" runat="server" GroupName="isShowMap" />
+            </li>
             <li class="text_grid_2_columns">
                 <asp:Label ID="winAddChannel_Note" runat="server" Text="Ghi chú"></asp:Label>:
             </li>
@@ -145,6 +151,7 @@
                     <telerik:AjaxUpdatedControl ControlID="rdoReverse" />
                     <telerik:AjaxUpdatedControl ControlID="txtDescription" />
                     <telerik:AjaxUpdatedControl ControlID="rdoIsShowLable" />
+                    <telerik:AjaxUpdatedControl ControlID="rdonotShowLable" />
                     <telerik:AjaxUpdatedControl ControlID="msg" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
@@ -169,6 +176,7 @@
                     <telerik:AjaxUpdatedControl ControlID="rdoReverse" />
                     <telerik:AjaxUpdatedControl ControlID="txtDescription" />
                     <telerik:AjaxUpdatedControl ControlID="rdoIsShowLable" />
+                    <telerik:AjaxUpdatedControl ControlID="rdonotShowLable" />
                     <telerik:AjaxUpdatedControl ControlID="msg" />
                 </UpdatedControls>
             </telerik:AjaxSetting>

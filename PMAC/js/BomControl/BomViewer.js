@@ -4,11 +4,13 @@ var chart2;
 var url;
 var table;
 var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Solar", "Temp"];
-var hostname = window.location.origin;
-if (hostname.indexOf("localhost") < 0)
-    hostname = hostname + "/AdamServices/";
-else
-    hostname = "http://localhost:61403";
+//var hostname = window.location.origin;
+//if (hostname.indexOf("localhost") < 0)
+//    hostname = hostname + "/AdamServices/";
+//else
+//    hostname = "http://localhost:61403";
+
+let hostname = 'http://117.2.130.229:3341/';
 
 var dataForTable = [];
 var isLoadDataWithTime = false;
@@ -335,6 +337,14 @@ function drawChartDataViewer(siteId, start, end) {
                 exportJPG: true,
                 exportPDF: true,
                 exportSVG: true
+            }
+
+            for (let graph of chart2.graphs) {
+                if (listChannel.indexOf(graph.id) == -1) {
+                    if (!graph.hidden) {
+                        chart2.hideGraph(graph);
+                    }
+                }
             }
             // WRITE
             chart2.write("chart_canvas");
