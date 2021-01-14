@@ -87,6 +87,69 @@
                 overflow-y: auto;
                 overflow-x: hidden;
             }
+            .gg-map {
+                position: relative;
+            }
+
+
+            .control-field {
+                position: absolute;
+                max-height: 80vh;
+                width: 250px;
+                top: 10px;
+                right: 60px;
+                background: white;
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 99;
+                padding: 10px;
+                border: 1px solid darkgrey;
+                border-radius: 10px;
+            }
+
+            .chart-control-field {
+                position: absolute;
+                max-height: 80vh;
+                width: 250px;
+                top: 10px;
+                right: 60px;
+                background: white;
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 100;
+                padding-left: 5px;
+                border: 1px solid darkgrey;
+                border-radius: 10px
+            }
+
+            .warning-control-field {
+                position: absolute;
+                max-height: 80vh;
+                width: 550px;
+                top: 10px;
+                right: 60px;
+                background: white;
+                overflow-y: auto;
+                overflow-x: hidden;
+                z-index: 100;
+                padding-left: 5px;
+                border: 1px solid darkgrey;
+                border-radius: 10px
+            }
+
+            .control-button {
+                background-color: rgb(255, 255, 255);
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 3px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;
+                cursor: pointer;
+                margin: 10px;
+                text-align: center;
+                height: 40px;
+                width: 40px;
+                z-index: 0;
+                position: absolute;
+            }
         </style>
 
     </head>
@@ -378,7 +441,13 @@
                                         </telerik:RadSlidingPane>
                                     </telerik:RadSlidingZone>
                                 </telerik:RadPane>
-                                <telerik:RadPane ID="RadPane2" runat="server" Height="100%">
+                                <telerik:RadPane ID="RadPane2" runat="server" Height="100%" CssClass="gg-map">
+                                    <div class="control-button" id="setting-control" data-toggle="collapse" data-target="#site-filter-option" aria-expanded="false" aria-controls="option-list" title="Options">
+                                        <i class="fa fa-filter fa-3x m-t-3 text-success"></i>
+                                    </div>
+                                    <div class="control-field collapse" id="site-filter-option">
+                                        
+                                    </div>
                                     <div id="map_canvas">
                                     </div>
                                 </telerik:RadPane>
@@ -671,6 +740,8 @@
                                     var urlGetChannelData = hostname + '/Service1.svc/GetChannelData/';
                                     var urlGetMultipleChannelsData = hostname + '/Service1.svc/GetMultipleChannelsData/';
                                     var urlGetDailyComplexData = hostname + '/Service1.svc/GetDailyComplexData/';
+                                    var urlGetDisplayGroup = hostname + '/Service1.svc/getdisplaygroup';
+                                    var urlGetSiteByDisplayGroup = hostname + '/Service1.svc/getsitebydisplaygroup/';
 
                                     //var urlMRed = 'http://i748.photobucket.com/albums/xx123/bttrung1988/mRed_zpscf7a64f6.png';
                                     var urlMRed = ' ~/App_Themes/red.png';
@@ -780,6 +851,10 @@
                                         };
                                         map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
+                                        //SETTING CONTROL
+                                        var settingControl = document.getElementById("setting-control");
+                                        map.controls[google.maps.ControlPosition.RIGHT_TOP].push(settingControl);
+
                                         var url = 'https://trungangis.capnuoctrungan.vn/arcgis/rest/services/mangluoi/mapserver';
                                         //var url = 'http://113.161.76.112:6080/arcgis/rest/services/KHAWASSCOMapService/MapServer';
                                         var cpc = new gmaps.ags.CopyrightControl(map);
@@ -822,7 +897,7 @@
                                                 $.getJSON(url, function (dc) {
 
                                                     //MAP CONTENT
-                                                    labelHtml = '<table cellspacing="0" cellpadding="0" style="border: solid gray 2px;font-size:1em;border-width:2px"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteId + '</span></td></tr>';
+                                                    labelHtml = '<table cellspacing="0" cellpadding="10" style="border: solid gray 1px;font-size:1em;"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteId + '</span></td></tr>';
                                                     infoHtml = '<span style="font-weight:bold">Vị trí: ' + s.Location + '</span>'
                                                         + '<br/><span>Logger Id: ' + s.LoggerId + '</span>'
                                                         + '</br><span>Index: ';
@@ -855,7 +930,7 @@
                                                         if (c.ChannelId[0] === "V") {
                                                             img = img_van;
                                                         }
-                                                        
+
                                                         //TREEVIEW CHANNEL NODE
                                                         var cNode = new Telerik.Web.UI.RadTreeNode();
                                                         cNode.set_text(c.ChannelName);
@@ -901,8 +976,12 @@
 
                                                             //dLabelHtml = '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow;"><span>' + val + ' (' + c.Unit + ')' + '</span></td><td style="text-align:right">' + htmlImg + '</td></tr></table>';
                                                         }
-                                                        dLabelHtml = '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow;"><span>' + Math.round(Math.abs(index)) + '</span></td></tr></table>';
+                                                        if (c.DisplayOnLable == true || c.DisplayOnLable == 1) {
+                                                            dLabelHtml += '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none">' + c.ChannelId + '</td><td style="text-align:center;font-weight:bold;color:yellow;  padding: 2px; border: none"><span>' + val + ' (' + c.Unit + ')' + '</span></td></tr>';
+                                                        }
+
                                                     });
+                                                    dLabelHtml += '<tr style="background-color:black"><td colspan="2" style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none"><span>' + Math.round(Math.abs(index)) + '</span></td></tr></table>';
                                                     labelHtml += dLabelHtml;
                                                     infoHtml += '<span style="font-weight:bold;color:blue;">' + Math.round(Math.abs(index)) + '</span></span>';
                                                     infoHtml += '<br/><table cellpadding="5" cellspacing="5">';
@@ -986,7 +1065,7 @@
                                             $.getJSON(url, function (dc) {
 
                                                 //MAP CONTENT
-                                                labelHtml = '<table cellspacing="0" cellpadding="0" style="border: solid gray 2px;font-size:1em"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteId + '</span></td></tr>';
+                                                labelHtml = '<table cellspacing="0" cellpadding="10" style="border: solid gray 1px;font-size:1em"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteId + '</span></td></tr>';
                                                 infoHtml = '<span style="font-weight:bold">Vị trí: ' + s.Location + '</span>'
                                                     + '<br/><span>Logger Id: ' + s.LoggerId + '</span>'
                                                     + '</br><span>Index: ';
@@ -1058,8 +1137,11 @@
                                                         //dLabelHtml = '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow;"><span>' + val + ' (' + c.Unit + ')' + '</span></td><td style="text-align:right">' + htmlImg + '</td></tr></table>';
 
                                                     }
-                                                    dLabelHtml = '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow;"><span>' + Math.round(Math.abs(index)) + '</span></td></tr></table>';
+                                                    if (c.DisplayOnLable == true || c.DisplayOnLable == 1) {
+                                                        dLabelHtml += '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none">' + c.ChannelId + '</td><td style="text-align:center;font-weight:bold;color:yellow;  padding: 2px; border: none"><span>' + val + ' (' + c.Unit + ')' + '</span></td></tr>';
+                                                    }
                                                 });
+                                                dLabelHtml += '<tr style="background-color:black"><td colspan="2" style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none"><span>' + Math.round(Math.abs(index)) + '</span></td></tr></table>';
                                                 labelHtml += dLabelHtml;
                                                 infoHtml += '<span style="font-weight:bold;color:blue;">' + Math.round(Math.abs(index)) + '</span></span>';
                                                 infoHtml += '<br/><table cellpadding="5" cellspacing="5">';
@@ -1469,18 +1551,45 @@
                                         else {
                                             url = urlGetChannelData + channel.id + "/" + start + "/" + end;
                                         }
+
+
+
+
+                                        
+                                        chartData.push(obj);
                                         console.log(url)
                                         $.getJSON(url, function (d) {
                                             chartData = [];
-                                            $.each(d.GetChannelDataResult, function (i, val) {
-                                                var parsedDate = new Date(parseInt(val.Timestamp.substr(6)));
-                                                var jsDate = new Date(parsedDate);
-                                                chartData.push({
-                                                    Timestamp: jsDate
+                                            if (channel.id[0] === "V") {
+                                                for (let i = 0; i < d.length; i++) {
+                                                    let obj = {};
+                                                    obj.Timestamp = ConverDate(d[i].TimeStamp)
+                                                    if (d[i].length != 0) {
+                                                        if (d[i] != undefined)
+                                                            if (d[i].Value != null && d[i].Value != undefined) {
+                                                                obj[`'${channel.id}'`] = d[i].Value == 0 ? 0 : d[i].Value;
+                                                            }
+                                                    }
+                                                    chartData.push(obj);
+                                                }
+
+                                            }
+                                            else {
+                                                $.each(d.GetChannelDataResult, function (i, val) {
+                                                    var parsedDate = new Date(parseInt(val.Timestamp.substr(6)));
+                                                    var jsDate = new Date(parsedDate);
+                                                    chartData.push({
+                                                        Timestamp: jsDate
+                                                    });
+                                                    if (val.Value != null && val.Value != 'undefined')
+                                                        chartData[i]["'" + channel.id + "'"] = val.Value;
                                                 });
-                                                if (val.Value != null && val.Value != 'undefined')
-                                                    chartData[i]["'" + channel.id + "'"] = val.Value;
-                                            });
+                                            }
+
+                                            chartData.sort(function (a, b) {
+                                                return a.Timestamp.getTime() - b.Timestamp.getTime()
+                                            })
+
                                             //SERIAL CHART
                                             chart = new AmCharts.AmSerialChart();
                                             chart.pathToImages = "../../js/amcharts/images/";
@@ -1608,6 +1717,20 @@
                                             chart.write("chart_canvas");
                                         });
                                     };
+
+                                    function ConverDate(date) {
+                                        let stringSplit = date.toString().split("-");
+                                        let year = parseInt(stringSplit[0]);
+                                        let month = parseInt(stringSplit[1]) < 10 ? `0${parseInt(stringSplit[1])}` : parseInt(stringSplit[1]);
+                                        let stringSplit2 = stringSplit[2].split("T");
+                                        let day = parseInt(stringSplit2[0]) < 10 ? `0${parseInt(stringSplit2[0])}` : parseInt(stringSplit2[0]);
+                                        let stringSplit3 = stringSplit2[1].split(":");
+                                        let hours = parseInt(stringSplit3[0]) < 10 ? `0${parseInt(stringSplit3[0])}` : parseInt(stringSplit3[0]);
+                                        let minutes = parseInt(stringSplit3[1]) < 10 ? `0${parseInt(stringSplit3[1])}` : parseInt(stringSplit3[1]);
+                                        let seconds = parseInt(stringSplit3[2]) < 10 ? `0${parseInt(stringSplit3[2])}` : parseInt(stringSplit3[2]);
+
+                                        return new Date(year, month - 1, day, hours, minutes, seconds);
+                                    }
 
                                     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////              
                                     function updateChartMinMax(start, end) {
@@ -1885,6 +2008,76 @@
                                     }
                                     window.onload = window_init;
                                     setInterval(updateMap, 5000);
+
+                                    function FillDisplayGroup() {
+                                        let siteFilterOption = document.getElementById('site-filter-option');
+
+                                        let url = urlGetDisplayGroup;
+                                        $.getJSON(url, function (d) {
+                                            console.log(d)
+                                            let content = "";
+                                            if (d.GetDisplayGroupsResult.length > 0) {
+                                                for (let item of d.GetDisplayGroupsResult) {
+                                                    if (item != null && item != undefined) {
+                                                        if (item.Group != null && item.Group != undefined && item.Group.toString().trim() != "") {
+                                                            content += `<div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="${item.Group}" data-group="${item.Group}" onchange="return filterSite(this);" checked />
+                                                                        <label class="custom-control-label" for="${item.Group}">${item.Group}</label>
+                                                                    </div>`;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            siteFilterOption.innerHTML = content;
+                                        })
+                                    }
+
+                                    FillDisplayGroup();
+
+                                    function filterSite(e) {
+                                        let displayGroup = e.dataset.group;
+
+                                        let url = urlGetSiteByDisplayGroup + displayGroup;
+
+                                        $.getJSON(url, function (d) {
+                                            if (d.GetSiteByDisplayGroupResult.length > 0) {
+                                                if (e.checked == true) {
+                                                    for (let marker of markers) {
+                                                        for (let item of d.GetSiteByDisplayGroupResult) {
+                                                            if (item.SiteId == marker.id.slice(2)) {
+                                                                marker.setVisible(true);
+                                                            }
+                                                        }
+                                                    }
+                                                    for (let ommarker of omarkers) {
+                                                        for (let item of d.GetSiteByDisplayGroupResult) {
+                                                            if (item.SiteId == ommarker.id.slice(3)) {
+                                                                ommarker.setVisible(true);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                else {
+                                                    for (let marker of markers) {
+                                                        for (let item of d.GetSiteByDisplayGroupResult) {
+                                                            if (item.SiteId == marker.id.slice(2)) {
+                                                                marker.setVisible(false);
+                                                            }
+                                                        }
+                                                    }
+                                                    for (let ommarker of omarkers) {
+                                                        for (let item of d.GetSiteByDisplayGroupResult) {
+                                                            if (item.SiteId == ommarker.id.slice(3)) {
+                                                                ommarker.setVisible(false);
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+                                        })
+                                    }
+
                                 </script>
                             </telerik:RadScriptBlock>
                         </div>

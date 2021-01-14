@@ -57,6 +57,11 @@ public partial class t_Channel_Configurations
     public Nullable<bool> ChannelOther { get; set; }
     public Nullable<double> basemin { get; set; }
     public Nullable<double> basemax { get; set; }
+    public string GroupChannel { get; set; }
+    public Nullable<bool> DisplayOnGraph { get; set; }
+    public Nullable<double> Baseline { get; set; }
+    public Nullable<bool> StatusViewAlarm { get; set; }
+    public Nullable<double> Offset { get; set; }
 
     public virtual t_Logger_Configurations t_Logger_Configurations { get; set; }
     public virtual t_Units t_Units { get; set; }
@@ -127,6 +132,7 @@ public partial class t_DisplayGroups
 
     public string Group { get; set; }
     public string Description { get; set; }
+    public string Name { get; set; }
 
     public virtual ICollection<t_Sites> t_Sites { get; set; }
 }
@@ -404,6 +410,9 @@ public partial class t_Sites
     public Nullable<int> SetDelayTime { get; set; }
     public Nullable<double> SetDiffValue { get; set; }
     public Nullable<double> Baseline { get; set; }
+    public Nullable<bool> DisplayOnGraph { get; set; }
+    public string DMA_In { get; set; }
+    public string DMA_Out { get; set; }
 
     public virtual t_Consumers t_Consumers { get; set; }
     public virtual ICollection<t_Data_Raw_Indexes> t_Data_Raw_Indexes { get; set; }

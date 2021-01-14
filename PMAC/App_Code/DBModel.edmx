@@ -45,6 +45,11 @@
           <Property Name="ChannelOther" Type="bit" />
           <Property Name="basemin" Type="float" />
           <Property Name="basemax" Type="float" />
+          <Property Name="GroupChannel" Type="nvarchar" MaxLength="250" />
+          <Property Name="DisplayOnGraph" Type="bit" />
+          <Property Name="Baseline" Type="float" />
+          <Property Name="StatusViewAlarm" Type="bit" />
+          <Property Name="Offset" Type="float" />
         </EntityType>
         <EntityType Name="t_Consumers">
           <Key>
@@ -102,6 +107,7 @@
           </Key>
           <Property Name="Group" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="t_Emails">
           <Key>
@@ -321,6 +327,9 @@
           <Property Name="SetDelayTime" Type="int" />
           <Property Name="SetDiffValue" Type="float" />
           <Property Name="Baseline" Type="float" />
+          <Property Name="DisplayOnGraph" Type="bit" />
+          <Property Name="DMA_In" Type="varchar" MaxLength="50" />
+          <Property Name="DMA_Out" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="t_Staffs">
           <Key>
@@ -743,16 +752,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="p_Calculate_One_Site_Daily_Output" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="SiteId" Type="nvarchar" Mode="In" />
-          <Parameter Name="Start" Type="datetime" Mode="In" />
-          <Parameter Name="End" Type="datetime" Mode="In" />
-        </Function>
-        <Function Name="p_Calculate_One_Site_Hourly_Output" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="SiteId" Type="nvarchar" Mode="In" />
-          <Parameter Name="Start" Type="datetime" Mode="In" />
-          <Parameter Name="End" Type="datetime" Mode="In" />
-        </Function>
         <Function Name="p_ComplexData_Select_Faster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="p_Create_Data_Table" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ChannelId" Type="varchar" Mode="In" />
@@ -1123,6 +1122,11 @@
           <Property Name="ChannelOther" Type="Boolean" />
           <Property Name="basemin" Type="Double" />
           <Property Name="basemax" Type="Double" />
+          <Property Name="GroupChannel" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DisplayOnGraph" Type="Boolean" />
+          <Property Name="Baseline" Type="Double" />
+          <Property Name="StatusViewAlarm" Type="Boolean" />
+          <Property Name="Offset" Type="Double" />
         </EntityType>
         <EntityType Name="t_Consumers">
           <Key>
@@ -1176,6 +1180,7 @@
           <Property Name="Group" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="t_Sites" Relationship="DBModel.FK_t_Sites_t_DisplayGroups1" FromRole="t_DisplayGroups" ToRole="t_Sites" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="t_Emails">
           <Key>
@@ -1384,6 +1389,9 @@
           <Property Name="SetDelayTime" Type="Int32" />
           <Property Name="SetDiffValue" Type="Double" />
           <Property Name="Baseline" Type="Double" />
+          <Property Name="DisplayOnGraph" Type="Boolean" />
+          <Property Name="DMA_In" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DMA_Out" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="t_Staffs">
           <Key>
@@ -1921,6 +1929,11 @@
           <EntitySetMapping Name="t_Channel_Configurations">
             <EntityTypeMapping TypeName="DBModel.t_Channel_Configurations">
               <MappingFragment StoreEntitySet="t_Channel_Configurations">
+                <ScalarProperty Name="Offset" ColumnName="Offset" />
+                <ScalarProperty Name="StatusViewAlarm" ColumnName="StatusViewAlarm" />
+                <ScalarProperty Name="Baseline" ColumnName="Baseline" />
+                <ScalarProperty Name="DisplayOnGraph" ColumnName="DisplayOnGraph" />
+                <ScalarProperty Name="GroupChannel" ColumnName="GroupChannel" />
                 <ScalarProperty Name="basemax" ColumnName="basemax" />
                 <ScalarProperty Name="basemin" ColumnName="basemin" />
                 <ScalarProperty Name="ChannelOther" ColumnName="ChannelOther" />
@@ -1986,6 +1999,7 @@
           <EntitySetMapping Name="t_DisplayGroups">
             <EntityTypeMapping TypeName="DBModel.t_DisplayGroups">
               <MappingFragment StoreEntitySet="t_DisplayGroups">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Group" ColumnName="Group" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
               </MappingFragment>
@@ -2151,6 +2165,9 @@
           <EntitySetMapping Name="t_Sites">
             <EntityTypeMapping TypeName="DBModel.t_Sites">
               <MappingFragment StoreEntitySet="t_Sites">
+                <ScalarProperty Name="DMA_Out" ColumnName="DMA_Out" />
+                <ScalarProperty Name="DMA_In" ColumnName="DMA_In" />
+                <ScalarProperty Name="DisplayOnGraph" ColumnName="DisplayOnGraph" />
                 <ScalarProperty Name="Baseline" ColumnName="Baseline" />
                 <ScalarProperty Name="SetDiffValue" ColumnName="SetDiffValue" />
                 <ScalarProperty Name="SetDelayTime" ColumnName="SetDelayTime" />
@@ -2329,8 +2346,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="p_Calculate_One_Site_Daily_Output" FunctionName="DBModel.Store.p_Calculate_One_Site_Daily_Output" />
-          <FunctionImportMapping FunctionImportName="p_Calculate_One_Site_Hourly_Output" FunctionName="DBModel.Store.p_Calculate_One_Site_Hourly_Output" />
           <EntitySetMapping Name="t_Device_Status">
             <EntityTypeMapping TypeName="DBModel.t_Device_Status">
               <MappingFragment StoreEntitySet="t_Device_Status">

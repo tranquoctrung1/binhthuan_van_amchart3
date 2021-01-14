@@ -143,7 +143,7 @@ namespace PMAC.DAL
                 origChannelConfiguration.Pressure2 = channelConfiguration.Pressure2;
                 origChannelConfiguration.ReverseFlow = channelConfiguration.ReverseFlow;
                 origChannelConfiguration.Unit = channelConfiguration.Unit;
-
+                origChannelConfiguration.DisplayOnLabel = channelConfiguration.DisplayOnLabel;
 
                 dbLoggerConfiguration.SiteId = loggerConfiguration.SiteId;
                 dbLoggerConfiguration.StartHour = loggerConfiguration.StartHour;
