@@ -445,8 +445,17 @@
                                     <div class="control-button" id="setting-control" data-toggle="collapse" data-target="#site-filter-option" aria-expanded="false" aria-controls="option-list" title="Options">
                                         <i class="fa fa-filter fa-3x m-t-3 text-success"></i>
                                     </div>
+                                     <div class="control-button" id="layer-control" data-toggle="collapse" data-target="#layer-option" aria-expanded="false" aria-controls="option-list" title="Options">
+                                         <img src="../../App_Themes/layer.png" alt="layer" style="width: 100%" />
+                                    </div>
                                     <div class="control-field collapse" id="site-filter-option">
                                         
+                                    </div>
+                                    <div class="control-field collapse" id="layer-option">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="areaKML"  onchange="return turnOnAreaKML(this);"/>
+                                            <label class="custom-control-label" for="areaKML">Vùng</label>
+                                        </div>
                                     </div>
                                     <div id="map_canvas">
                                     </div>
@@ -820,6 +829,10 @@
                                     var img = image_nor;
                                     var colors = [];
 
+                                    let areaKMLFile = "https://112.78.4.162:2211/kml/LayerDMA.kmz";
+                                    let kml_area;
+
+
                                     function getQueryStrings() {
                                         var assoc = {};
                                         var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
@@ -842,7 +855,7 @@
                                         var uid = qs["uid"];
 
                                         zoom = 15;
-                                        center = new google.maps.LatLng(10.934852, 108.102696);
+                                        center = new google.maps.LatLng(10.919935, 108.089190);
                                         var myOptions = {
                                             zoom: zoom,
                                             center: center,
@@ -854,6 +867,8 @@
                                         //SETTING CONTROL
                                         var settingControl = document.getElementById("setting-control");
                                         map.controls[google.maps.ControlPosition.RIGHT_TOP].push(settingControl);
+                                        var layerControl = document.getElementById("layer-control");
+                                        map.controls[google.maps.ControlPosition.RIGHT_TOP].push(layerControl);
 
                                         var url = 'https://trungangis.capnuoctrungan.vn/arcgis/rest/services/mangluoi/mapserver';
                                         //var url = 'http://113.161.76.112:6080/arcgis/rest/services/KHAWASSCOMapService/MapServer';
@@ -1181,6 +1196,7 @@
                                         loop_ow:
                                         for (var i = 0; i < markers.length; i++) {
                                             if (markers[i].id == ('m_' + id)) {
+                                                map.setZoom(17);
                                                 map.panTo(markers[i].getPosition());
                                                 google.maps.event.trigger(markers[i], 'click');
                                                 break loop_ow;
@@ -2077,6 +2093,25 @@
                                             }
                                         })
                                     }
+
+                                    // turn on or turn off kml area 
+                                    function turnOnAreaKML(e) {
+
+                                        if (e.checked == true) {
+                                            kml_area = new google.maps.KmlLayer({
+                                                url: areaKMLFile,
+                                                map: map,
+                                            });
+                                        }
+                                        else {
+                                            kml_area.setMap(null);
+                                            let reCenter = new google.maps.LatLng(10.919935, 108.089190);
+                                            map.panTo(reCenter);
+                                            map.setZoom(15);
+                                        }
+                                    }
+
+
 
                                 </script>
                             </telerik:RadScriptBlock>
