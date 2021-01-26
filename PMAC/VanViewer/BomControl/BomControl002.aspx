@@ -81,12 +81,12 @@
                                 </div>
                                 <div class="col-md-8 col-bom-control" data-aos="flip-right">
                                     <div class="row button-bom-control">
-                                        <button type="button" class="btn btn-info" id="showModal" data-toggle="modal" disabled="disabled" data-target="#controllerMode">Chế Độ Điều Khiển</button>
+                                        <button type="button" class="btn btn-info" id="showModal" data-toggle="modal" data-target="#controllerMode">Chế Độ Điều Khiển</button>
                                         <button type="button" class="btn btn-success ml-3" disabled="disabled" id="action">Local</button>
-                                        <button type="button" class="btn btn-info ml-3" data-toggle="modal" disabled="disabled" data-target="#history" id="showHistoryAlarm">Lịch Sữ Cảnh Báo</button>
+                                        <button type="button" class="btn btn-info ml-3" data-toggle="modal" data-target="#history" id="showHistoryAlarm">Lịch Sữ Cảnh Báo</button>
                                     </div>
                                     <div class="row name-station-area">
-                                        <h4 class="name-station">Tên Trạm: <span data-toggle="modal1" data-target="#dataViewer" id="showPopupDataViewer">V002</span></h4>
+                                        <h4 class="name-station">Tên Trạm: <span data-toggle="modal" data-target="#dataViewer" id="showPopupDataViewer">V002</span></h4>
                                         <button type="button" class="ml-4 connect" disabled="disabled"  id="buttonStatusConnect">Connect</button>
                                     </div>
                                     <%--<div class="custom-control custom-switch mb-3">
