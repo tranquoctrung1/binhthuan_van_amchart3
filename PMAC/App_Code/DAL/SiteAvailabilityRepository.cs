@@ -41,5 +41,12 @@ namespace PMAC.DAL
 
             //return context.t_Site_Availabilities.OrderBy(a => a.Availability).ToList();
         }
+        public IEnumerable<t_Site_Availabilities> GetAllSiteAvailabilitiesForApp()
+        {
+            var listDB = context.t_Site_Availabilities.Where(x => x.Language == "vi").OrderBy(a => a.Availability).ToList();
+            return listDB;
+        }
+
+      
     }
 }

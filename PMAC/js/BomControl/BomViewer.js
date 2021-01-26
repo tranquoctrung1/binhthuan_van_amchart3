@@ -3,7 +3,7 @@ let showPopupDataViewer = document.getElementById('showPopupDataViewer');
 var chart2;
 var url;
 var table;
-var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Solar", "Temp"];
+var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Temp"];
 //var hostname = window.location.origin;
 //if (hostname.indexOf("localhost") < 0)
 //    hostname = hostname + "/AdamServices/";
@@ -203,6 +203,7 @@ function drawChartDataViewer(siteId, start, end) {
                     index = i;
                 }
                 if (tempData[i][0] != undefined) {
+                    if (tempData[i][0].ChannelID != "Solar")
                     channels.push(tempData[i][0].ChannelID);
                 }
             }
@@ -662,11 +663,12 @@ function updateChart(siteId) {
             let index = 0;
             for (let i = 0; i < tempData.length; i++) {
                 if (max < tempData[i]) {
-                    max = tempData[i].length;
+                    max = tempData[i].length; 
                     index = i;
                 }
                 if (tempData[i][0] != undefined) {
-                    channels.push(tempData[i][0].ChannelID);
+                    if (tempData[i][0].ChannelID != "Solar")
+                        channels.push(tempData[i][0].ChannelID);
                 }
             }
 

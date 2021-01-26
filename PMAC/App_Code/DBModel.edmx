@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="DeviceTokenApp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="250" />
+          <Property Name="DeviceToken" Type="ntext" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Sound" Type="bit" />
+        </EntityType>
         <EntityType Name="t_Accreditation_Types">
           <Key>
             <PropertyRef Name="Type" />
@@ -58,6 +68,17 @@
           <Property Name="ConsumerId" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Zoom" Type="tinyint" />
           <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="t_Control_Sampler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="stationId" Type="nvarchar" MaxLength="250" />
+          <Property Name="ipaddress" Type="nvarchar" MaxLength="250" />
+          <Property Name="port" Type="nvarchar" MaxLength="250" />
+          <Property Name="partnerId" Type="nvarchar" MaxLength="250" />
+          <Property Name="time" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="t_Data_Complexes">
           <Key>
@@ -129,6 +150,14 @@
           <Property Name="Sort" Type="int" />
           <Property Name="Note" Type="nvarchar" MaxLength="200" />
           <Property Name="Language" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t_GroupChannel">
+          <Key>
+            <PropertyRef Name="GroupChannel" />
+          </Key>
+          <Property Name="GroupChannel" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="t_Language">
           <Key>
@@ -353,6 +382,19 @@
           <Property Name="IsSystem" Type="bit" />
           <Property Name="Activated" Type="bit" Nullable="false" />
           <Property Name="LanguageId" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="t_TakeSampleHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SiteID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="UserTake" Type="varchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsNotified" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="t_Transmitter_Files">
           <Key>
@@ -770,16 +812,19 @@
           <Parameter Name="EndDate" Type="datetime" Mode="In" />
         </Function>
         <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="DeviceTokenApp" EntityType="Self.DeviceTokenApp" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Accreditation_Types" EntityType="Self.t_Accreditation_Types" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Accreditations" EntityType="Self.t_Accreditations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Channel_Configurations" EntityType="Self.t_Channel_Configurations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Consumers" EntityType="Self.t_Consumers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_Control_Sampler" EntityType="Self.t_Control_Sampler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Data_Complexes" EntityType="Self.t_Data_Complexes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Data_Raw_Indexes" EntityType="Self.t_Data_Raw_Indexes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Device_Status" EntityType="Self.t_Device_Status" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_DisplayGroups" EntityType="Self.t_DisplayGroups" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Emails" EntityType="Self.t_Emails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Function" EntityType="Self.t_Function" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_GroupChannel" EntityType="Self.t_GroupChannel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Language" EntityType="Self.t_Language" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_LanguageTranslate" EntityType="Self.t_LanguageTranslate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Logger_Configurations" EntityType="Self.t_Logger_Configurations" Schema="dbo" store:Type="Tables" />
@@ -797,6 +842,7 @@
           <EntitySet Name="t_Sites" EntityType="Self.t_Sites" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Staffs" EntityType="Self.t_Staffs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_SysParam" EntityType="Self.t_SysParam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="t_TakeSampleHistory" EntityType="Self.t_TakeSampleHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Transmitter_Files" EntityType="Self.t_Transmitter_Files" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Transmitter_Histories" EntityType="Self.t_Transmitter_Histories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="t_Transmitters" EntityType="Self.t_Transmitters" Schema="dbo" store:Type="Tables" />
@@ -1075,6 +1121,10 @@
             <Parameter Name="End" Mode="In" Type="DateTime" />
           </FunctionImport>
           <EntitySet Name="t_Device_Status" EntityType="DBModel.t_Device_Status" />
+          <EntitySet Name="DeviceTokenApps" EntityType="DBModel.DeviceTokenApp" />
+          <EntitySet Name="t_Control_Sampler" EntityType="DBModel.t_Control_Sampler" />
+          <EntitySet Name="t_GroupChannel" EntityType="DBModel.t_GroupChannel" />
+          <EntitySet Name="t_TakeSampleHistory" EntityType="DBModel.t_TakeSampleHistory" />
         </EntityContainer>
         <EntityType Name="t_Accreditation_Types">
           <Key>
@@ -1899,6 +1949,48 @@
           <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
           <Property Name="Language" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
+        <EntityType Name="DeviceTokenApp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DeviceToken" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Sound" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="t_Control_Sampler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="stationId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ipaddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="port" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="partnerId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="t_GroupChannel">
+          <Key>
+            <PropertyRef Name="GroupChannel" />
+          </Key>
+          <Property Name="GroupChannel" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="t_TakeSampleHistory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SiteID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="UserTake" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsNotified" Type="Boolean" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2352,6 +2444,52 @@
                 <ScalarProperty Name="Language" ColumnName="Language" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeviceTokenApps">
+            <EntityTypeMapping TypeName="DBModel.DeviceTokenApp">
+              <MappingFragment StoreEntitySet="DeviceTokenApp">
+                <ScalarProperty Name="Sound" ColumnName="Sound" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DeviceToken" ColumnName="DeviceToken" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_Control_Sampler">
+            <EntityTypeMapping TypeName="DBModel.t_Control_Sampler">
+              <MappingFragment StoreEntitySet="t_Control_Sampler">
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="partnerId" ColumnName="partnerId" />
+                <ScalarProperty Name="port" ColumnName="port" />
+                <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+                <ScalarProperty Name="stationId" ColumnName="stationId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_GroupChannel">
+            <EntityTypeMapping TypeName="DBModel.t_GroupChannel">
+              <MappingFragment StoreEntitySet="t_GroupChannel">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="GroupChannel" ColumnName="GroupChannel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="t_TakeSampleHistory">
+            <EntityTypeMapping TypeName="DBModel.t_TakeSampleHistory">
+              <MappingFragment StoreEntitySet="t_TakeSampleHistory">
+                <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="UserTake" ColumnName="UserTake" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

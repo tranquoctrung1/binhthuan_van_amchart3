@@ -39,5 +39,9 @@ namespace PMAC.DAL
         void InsertSite(t_Sites Site);
 
         void UpdateSite(t_Sites Site, t_Sites origSite);
+
+        IEnumerable<t_SiteCustomer> GetSitesForMapCustom();
+        IEnumerable<t_SiteCustomer> GetSitesForMapByConsumerIdCustom(string consumerId);
+        IEnumerable<t_SiteCustomer> GetSitesForMapByStaffIdCustom(string staffId);
     }
 }

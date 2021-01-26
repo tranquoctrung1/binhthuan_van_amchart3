@@ -110,5 +110,15 @@ namespace PMAC.BLL
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        public IEnumerable<t_Channel_Configurations> GetAlarmChannelByLoggerID(string loggerID)
+        {
+            return channelConfigurationRepository.GetAlarmChannelByLoggerID(loggerID);
+        }
+
+        public bool ConfirmAlarmByLoggerID(string loggerID)
+        {
+            return channelConfigurationRepository.ConfirmAlarmByLoggerID(loggerID);
+        }
     }
 }

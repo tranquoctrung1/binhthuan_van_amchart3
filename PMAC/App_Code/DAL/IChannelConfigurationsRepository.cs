@@ -27,5 +27,9 @@ namespace PMAC.DAL
         void InsertChannelConfiguration(t_Channel_Configurations channelConfiguration);
 
         void UpdateChannelConfiguration(t_Channel_Configurations channelConfiguration, t_Channel_Configurations origChannelConfiguration);
+
+        IEnumerable<t_Channel_Configurations> GetAlarmChannelByLoggerID(string loggerID);
+
+        bool ConfirmAlarmByLoggerID(string loggerID);
     }
 }

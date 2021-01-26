@@ -46,5 +46,11 @@ namespace PMAC.DAL
         {
             return siteAvailabilityRepository.GetAllSiteAvailabilities();
         }
+
+        [DataObjectMethod(DataObjectMethodType.Select, true)]
+        public IEnumerable<t_Site_Availabilities> GetAllSiteAvailabilitiesForApp()
+        {
+            return siteAvailabilityRepository.GetAllSiteAvailabilitiesForApp();
+        }
     }
 }

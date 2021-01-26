@@ -4,7 +4,7 @@ var chart2;
 var url;
 var table;
 // unstable and can modify name channel or add new channel 
-var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Solar", "Temp"];
+var listChannel = ["Acquy", "Humidity", "P1", "P2", "P2Set", "Temp"];
 //var hostname = window.location.origin;
 //if (hostname.indexOf("localhost") < 0)
 //    hostname = hostname + "/AdamServices/";
@@ -204,7 +204,8 @@ function drawChartDataViewer(siteId, start, end) {
                     index = i;
                 }
                 if (tempData[i][0] != undefined) {
-                    channels.push(tempData[i][0].ChannelID);
+                    if (tempData[i][0].ChannelID != "Solar")
+                        channels.push(tempData[i][0].ChannelID);
                 }
             }
 
@@ -672,7 +673,8 @@ function updateChart(siteId) {
                     index = i;
                 }
                 if (tempData[i][0] != undefined) {
-                    channels.push(tempData[i][0].ChannelID);
+                    if (tempData[i][0].ChannelID != "Solar")
+                        channels.push(tempData[i][0].ChannelID);
                 }
             }
 

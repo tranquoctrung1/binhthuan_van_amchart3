@@ -12,5 +12,6 @@ namespace PMAC.DAL
     public interface ISiteAvailabilityRepository : IDisposable
     {
         IEnumerable<t_Site_Availabilities> GetAllSiteAvailabilities();
+        IEnumerable<t_Site_Availabilities> GetAllSiteAvailabilitiesForApp();
     }
 }

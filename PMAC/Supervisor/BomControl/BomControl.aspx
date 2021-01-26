@@ -68,10 +68,10 @@
                                             <tr>
                                                 <th scope="row"><span>Nhiệt độ</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="tempShow">2.0</a></th>
                                                 <%--<th scope="row"><span>P1</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="p1Show">2.0</a></th>--%>
-                                                <th scope="row"><span>Solar</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="solarShow">2.0</a></th>
+                                                <th scope="row" style="display: none"><span>Solar</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="solarShow">2.0</a></th>
+                                                <th scope="row"><span>Độ ẩm</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="humidityShow">2.0</a></th>
                                             </tr>
                                             <tr>
-                                                <th scope="row"><span>Độ ẩm</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="humidityShow">2.0</a></th>
                                                 <%--<th scope="row"><span>P2</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="p2Show">2.0</a></th>--%>
                                                 <th scope="row"><span>Acquy</span> <a href="javascript: void(0);" class="btn btn-primary btn-sm disabled" tabindex="-1" role="button" aria-disabled="true" id="acquyShow">2.0</a></th>
                                             </tr>
@@ -567,10 +567,10 @@
                                                              <input type="checkbox" class="custom-control-input" id="Temp" data-channel="Temp" checked>
                                                              <label class="custom-control-label" for="Temp">Temp</label>
                                                            </div>
-                                                          <div class="custom-control custom-switch">
+                                                          <%--<div class="custom-control custom-switch">
                                                              <input type="checkbox" class="custom-control-input" id="Solar" data-channel="Solar" checked>
                                                              <label class="custom-control-label" for="Solar">Solar</label>
-                                                           </div>
+                                                           </div>--%>
                                                            <div class="custom-control custom-switch">
                                                              <input type="checkbox" class="custom-control-input" id="Humidity" data-channel="Humidity" checked>
                                                              <label class="custom-control-label" for="Humidity">Humidity</label>

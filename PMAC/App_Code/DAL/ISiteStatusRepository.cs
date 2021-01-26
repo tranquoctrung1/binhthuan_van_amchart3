@@ -12,5 +12,6 @@ namespace PMAC.DAL
     public interface ISiteStatusRepository : IDisposable
     {
         IEnumerable<t_Site_Status> GetAllSiteStatus();
+        IEnumerable<t_Site_Status> GetAllSiteStatusForApp();
     }
 }

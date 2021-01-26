@@ -45,5 +45,11 @@ namespace PMAC.DAL
         {
             return siteStatusRepository.GetAllSiteStatus();
         }
+
+        [DataObjectMethod(DataObjectMethodType.Select, true)]
+        public IEnumerable<t_Site_Status> GetAllSiteStatusForApp()
+        {
+            return siteStatusRepository.GetAllSiteStatusForApp();
+        }
     }
 }

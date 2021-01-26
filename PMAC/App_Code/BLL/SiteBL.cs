@@ -140,5 +140,19 @@ namespace PMAC.BLL
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        public IEnumerable<t_SiteCustomer> GetSitesForMapCustom()
+        {
+            return siteRepository.GetSitesForMapCustom();
+        }
+        public IEnumerable<t_SiteCustomer> GetSitesForMapByConsumerIdCustom(string consumerID)
+        {
+            return siteRepository.GetSitesForMapByConsumerIdCustom(consumerID);
+        }
+
+        public IEnumerable<t_SiteCustomer> GetSitesForMapByStaffIdCustom(string staffId)
+        {
+            return siteRepository.GetSitesForMapByStaffIdCustom(staffId);
+        }
     }
 }

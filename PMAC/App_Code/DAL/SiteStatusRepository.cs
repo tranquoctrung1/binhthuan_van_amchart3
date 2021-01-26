@@ -41,5 +41,11 @@ namespace PMAC.DAL
 
             //return context.t_Site_Status.OrderBy(s => s.Status).ToList();
         }
+
+        public IEnumerable<t_Site_Status> GetAllSiteStatusForApp()
+        {
+            var listDB = context.t_Site_Status.Where(x => x.Language == "vi").OrderBy(s => s.Status).ToList();
+            return listDB;
+        }
     }
 }

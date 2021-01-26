@@ -211,5 +211,72 @@ namespace PMAC.DAL
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        public IEnumerable<t_SiteCustomer> GetSitesForMapCustom()
+        {
+            var result = (from s in context.t_Sites
+                          join td in context.t_DisplayGroups on s.DisplayGroup equals td.Group
+                          where s.Latitude != null && s.Longitude != null && !string.IsNullOrEmpty(s.LoggerId) && s.t_Logger_Configurations != null
+                          select new t_SiteCustomer
+                          {
+                              SiteId = s.SiteId,
+                              SiteAliasName = s.SiteAliasName,
+                              Location = s.Location,
+                              Latitude = (double)s.Latitude,
+                              Longitude = (double)s.Longitude,
+                              LoggerId = s.LoggerId,
+                              LabelAnchorX = s.LabelAnchorX,
+                              LabelAnchorY = s.LabelAnchorY,
+                              DisplayGroup = td.Group,
+                              Name = td.Name
+                          }
+                         ).ToList();
+
+            return result;
+        }
+        public IEnumerable<t_SiteCustomer> GetSitesForMapByConsumerIdCustom(string consumerId)
+        {
+            var result = (from s in context.t_Sites
+                          join td in context.t_DisplayGroups on s.DisplayGroup equals td.Group
+                          where s.Latitude != null && s.Longitude != null && s.ConsumerId == consumerId && !string.IsNullOrEmpty(s.LoggerId) && s.t_Logger_Configurations != null
+                          select new t_SiteCustomer
+                          {
+                              SiteId = s.SiteId,
+                              SiteAliasName = s.SiteAliasName,
+                              Location = s.Location,
+                              Latitude = (double)s.Latitude,
+                              Longitude = (double)s.Longitude,
+                              LoggerId = s.LoggerId,
+                              LabelAnchorX = s.LabelAnchorX,
+                              LabelAnchorY = s.LabelAnchorY,
+                              DisplayGroup = s.DisplayGroup,
+                              Name = td.Name
+                          }
+                       ).ToList();
+
+            return result;
+        }
+        public IEnumerable<t_SiteCustomer> GetSitesForMapByStaffIdCustom(string staffId)
+        {
+            var result = (from s in context.t_Sites
+                          join td in context.t_DisplayGroups on s.DisplayGroup equals td.Group
+                          where s.Latitude != null && s.Longitude != null && s.Staffs.Contains(staffId) && !string.IsNullOrEmpty(s.LoggerId) && s.t_Logger_Configurations != null
+                          select new t_SiteCustomer
+                          {
+                              SiteId = s.SiteId,
+                              SiteAliasName = s.SiteAliasName,
+                              Location = s.Location,
+                              Latitude = (double)s.Latitude,
+                              Longitude = (double)s.Longitude,
+                              LoggerId = s.LoggerId,
+                              LabelAnchorX = s.LabelAnchorX,
+                              LabelAnchorY = s.LabelAnchorY,
+                              DisplayGroup = td.Group,
+                              Name = td.Name
+                          }
+                        ).ToList();
+
+            return result;
+        }
     }
 }

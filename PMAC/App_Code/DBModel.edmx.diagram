@@ -63,6 +63,10 @@
         <EntityTypeShape EntityType="DBModel.t_SysParam" Width="1.5" PointX="10.375" PointY="0.75" />
         <EntityTypeShape EntityType="DBModel.t_RoleFunction" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="DBModel.t_Device_Status" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModel.DeviceTokenApp" Width="1.5" PointX="13.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DBModel.t_Control_Sampler" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DBModel.t_GroupChannel" Width="1.5" PointX="13.375" PointY="9.75" />
+        <EntityTypeShape EntityType="DBModel.t_TakeSampleHistory" Width="1.5" PointX="13.375" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

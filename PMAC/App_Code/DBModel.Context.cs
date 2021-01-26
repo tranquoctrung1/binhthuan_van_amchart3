@@ -58,6 +58,10 @@ public partial class DBEntities : DbContext
     public DbSet<t_SysParam> t_SysParam { get; set; }
     public DbSet<t_RoleFunction> t_RoleFunction { get; set; }
     public DbSet<t_Device_Status> t_Device_Status { get; set; }
+    public DbSet<DeviceTokenApp> DeviceTokenApps { get; set; }
+    public DbSet<t_Control_Sampler> t_Control_Sampler { get; set; }
+    public DbSet<t_GroupChannel> t_GroupChannel { get; set; }
+    public DbSet<t_TakeSampleHistory> t_TakeSampleHistory { get; set; }
 
     public virtual int p_Create_Data_Table(string channelId)
     {

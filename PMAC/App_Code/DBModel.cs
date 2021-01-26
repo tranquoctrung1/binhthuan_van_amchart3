@@ -10,6 +10,15 @@
 using System;
 using System.Collections.Generic;
 
+public partial class DeviceTokenApp
+{
+    public int id { get; set; }
+    public string Username { get; set; }
+    public string DeviceToken { get; set; }
+    public Nullable<bool> Status { get; set; }
+    public Nullable<bool> Sound { get; set; }
+}
+
 public partial class t_Accreditation_Types
 {
     public t_Accreditation_Types()
@@ -83,6 +92,16 @@ public partial class t_Consumers
     public virtual ICollection<t_Users> t_Users { get; set; }
 }
 
+public partial class t_Control_Sampler
+{
+    public int id { get; set; }
+    public string stationId { get; set; }
+    public string ipaddress { get; set; }
+    public string port { get; set; }
+    public string partnerId { get; set; }
+    public string time { get; set; }
+}
+
 public partial class t_Data_Complexes
 {
     public string LoggerId { get; set; }
@@ -154,6 +173,13 @@ public partial class t_Function
     public Nullable<int> Sort { get; set; }
     public string Note { get; set; }
     public string Language { get; set; }
+}
+
+public partial class t_GroupChannel
+{
+    public string GroupChannel { get; set; }
+    public string Description { get; set; }
+    public Nullable<int> Status { get; set; }
 }
 
 public partial class t_Language
@@ -453,6 +479,18 @@ public partial class t_SysParam
     public Nullable<bool> IsSystem { get; set; }
     public bool Activated { get; set; }
     public string LanguageId { get; set; }
+}
+
+public partial class t_TakeSampleHistory
+{
+    public int ID { get; set; }
+    public string SiteID { get; set; }
+    public System.DateTime TimeStamp { get; set; }
+    public bool Status { get; set; }
+    public string UserTake { get; set; }
+    public string Type { get; set; }
+    public string Description { get; set; }
+    public bool IsNotified { get; set; }
 }
 
 public partial class t_Transmitter_Files

@@ -231,5 +231,28 @@ namespace PMAC.DAL
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
+        public IEnumerable<t_Channel_Configurations> GetAlarmChannelByLoggerID(string loggerID)
+        {
+            return context.t_Channel_Configurations.OrderBy(c => c.ChannelName).Where(c => c.LoggerId == loggerID && c.StatusViewAlarm == false).ToList();
+        }
+
+        public bool ConfirmAlarmByLoggerID(string loggerID)
+        {
+            try
+            {
+                var channels = context.t_Channel_Configurations.Where(c => c.LoggerId == loggerID).ToList();
+                foreach (var item in channels)
+                {
+                    item.StatusViewAlarm = true;
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
