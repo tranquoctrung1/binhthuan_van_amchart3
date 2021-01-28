@@ -124,6 +124,7 @@ public partial class Controls_ucChannel : System.Web.UI.UserControl
         channelConfiguration.Pressure2 = rdoPressure2.Checked;
         channelConfiguration.ReverseFlow = rdoReverse.Checked;
         channelConfiguration.Unit = cboUnits.Text;
+        channelConfiguration.ChannelOther = rdoChannelOther.Checked;
         if(rdoIsShowLable.Checked == true)
         {
             channelConfiguration.DisplayOnLabel = true;
@@ -193,6 +194,7 @@ public partial class Controls_ucChannel : System.Web.UI.UserControl
         rdoPressure1.Checked = channelConfiguration.Pressure1 ?? false;
         rdoPressure2.Checked = channelConfiguration.Pressure2 ?? false;
         rdoReverse.Checked = channelConfiguration.ReverseFlow ?? false;
+        rdoChannelOther.Checked = channelConfiguration.ChannelOther ?? false;
         if(channelConfiguration.DisplayOnLabel == true)
         {
             rdoIsShowLable.Checked = true;
@@ -215,5 +217,6 @@ public partial class Controls_ucChannel : System.Web.UI.UserControl
         rdoReverse.Checked = false;
         rdoIsShowLable.Checked = false;
         rdonotShowLable.Checked = false;
+        rdoChannelOther.Checked = false;
     }
 }

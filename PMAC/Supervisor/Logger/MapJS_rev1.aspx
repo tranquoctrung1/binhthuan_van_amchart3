@@ -912,7 +912,7 @@
                                                 $.getJSON(url, function (dc) {
 
                                                     //MAP CONTENT
-                                                    labelHtml = '<table cellspacing="0" cellpadding="10" style="border: solid gray 1px;font-size:1em;"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteId + '</span></td></tr>';
+                                                    labelHtml = '<table cellspacing="0" cellpadding="10" style="border: solid gray 1px;font-size:1em;"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteAliasName + '</span></td></tr>';
                                                     infoHtml = '<span style="font-weight:bold">Vị trí: ' + s.Location + '</span>'
                                                         + '<br/><span>Logger Id: ' + s.LoggerId + '</span>'
                                                         + '</br><span>Index: ';
@@ -992,7 +992,7 @@
                                                             //dLabelHtml = '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow;"><span>' + val + ' (' + c.Unit + ')' + '</span></td><td style="text-align:right">' + htmlImg + '</td></tr></table>';
                                                         }
                                                         if (c.DisplayOnLable == true || c.DisplayOnLable == 1) {
-                                                            dLabelHtml += '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none">' + c.ChannelId + '</td><td style="text-align:center;font-weight:bold;color:yellow;  padding: 2px; border: none"><span>' + val + ' (' + c.Unit + ')' + '</span></td></tr>';
+                                                            dLabelHtml += '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none">' + c.ChannelName + '</td><td style="text-align:center;font-weight:bold;color:yellow;  padding: 2px; border: none"><span>' + val + ' (' + c.Unit + ')' + '</span></td></tr>';
                                                         }
 
                                                     });
@@ -1080,7 +1080,7 @@
                                             $.getJSON(url, function (dc) {
 
                                                 //MAP CONTENT
-                                                labelHtml = '<table cellspacing="0" cellpadding="10" style="border: solid gray 1px;font-size:1em"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteId + '</span></td></tr>';
+                                                labelHtml = '<table cellspacing="0" cellpadding="10" style="border: solid gray 1px;font-size:1em"><tr><td colspan="2" style="text-align:center;font-weight:bold;color:blue;background-color:white"><span>' + s.SiteAliasName + '</span></td></tr>';
                                                 infoHtml = '<span style="font-weight:bold">Vị trí: ' + s.Location + '</span>'
                                                     + '<br/><span>Logger Id: ' + s.LoggerId + '</span>'
                                                     + '</br><span>Index: ';
@@ -1153,7 +1153,7 @@
 
                                                     }
                                                     if (c.DisplayOnLable == true || c.DisplayOnLable == 1) {
-                                                        dLabelHtml += '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none">' + c.ChannelId + '</td><td style="text-align:center;font-weight:bold;color:yellow;  padding: 2px; border: none"><span>' + val + ' (' + c.Unit + ')' + '</span></td></tr>';
+                                                        dLabelHtml += '<tr style="background-color:black"><td style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none">' + c.ChannelName + '</td><td style="text-align:center;font-weight:bold;color:yellow;  padding: 2px; border: none"><span>' + val + ' (' + c.Unit + ')' + '</span></td></tr>';
                                                     }
                                                 });
                                                 dLabelHtml += '<tr style="background-color:black"><td colspan="2" style="text-align:center;font-weight:bold;color:yellow; padding: 2px; border: none"><span>' + Math.round(Math.abs(index)) + '</span></td></tr></table>';

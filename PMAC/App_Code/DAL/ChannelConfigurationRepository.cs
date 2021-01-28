@@ -144,6 +144,7 @@ namespace PMAC.DAL
                 origChannelConfiguration.ReverseFlow = channelConfiguration.ReverseFlow;
                 origChannelConfiguration.Unit = channelConfiguration.Unit;
                 origChannelConfiguration.DisplayOnLabel = channelConfiguration.DisplayOnLabel;
+                origChannelConfiguration.ChannelOther = channelConfiguration.ChannelOther;
 
                 dbLoggerConfiguration.SiteId = loggerConfiguration.SiteId;
                 dbLoggerConfiguration.StartHour = loggerConfiguration.StartHour;

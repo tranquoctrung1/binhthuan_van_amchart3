@@ -497,6 +497,7 @@
                                         <asp:Label ID="status_header" runat="server" Text="Trạng thái"></asp:Label>
                                     </td>
                                     <td style="width: 160px;">
+
                                         <asp:Label ID="description_header" runat="server" Text="Mô tả"></asp:Label>
                                     </td>
                                 </tr>
