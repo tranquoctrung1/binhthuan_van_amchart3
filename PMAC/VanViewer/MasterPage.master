@@ -113,17 +113,32 @@
                                     <ul class="sidebar-nav">
                                         <li>
                                             <a href="/VanViewer/BomControl/BomControl.aspx">
-                                                <asp:Label ID="Label2" runat="server" Text="Van V001"></asp:Label>    
+                                                <asp:Label ID="Label2" runat="server" Text="DN200 Gần biển"></asp:Label>    
                                             </a>
                                         </li>
                                         <li>
                                             <a href="/VanViewer/BomControl/BomControl002.aspx">
-                                                <asp:Label ID="Label3" runat="server" Text="Van V002"></asp:Label>    
+                                                <asp:Label ID="Label3" runat="server" Text="DN200 QL1"></asp:Label>    
                                             </a>
                                         </li>
                                         <li>
                                             <a href="/VanViewer/BomControl/BomControl003.aspx">
-                                                <asp:Label ID="Label4" runat="server" Text="Van V003"></asp:Label>    
+                                                <asp:Label ID="Label4" runat="server" Text="DN150"></asp:Label>    
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/VanViewer/BomControl/BomControl004.aspx">
+                                                <asp:Label ID="Label5" runat="server" Text="DN200 Novaworld 1"></asp:Label>    
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/VanViewer/BomControl/BomControl005.aspx">
+                                                <asp:Label ID="Label6" runat="server" Text="DN200 Novaworld 2"></asp:Label>    
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/VanViewer/BomControl/BomControl006.aspx">
+                                                <asp:Label ID="Label7" runat="server" Text="Van V006"></asp:Label>    
                                             </a>
                                         </li>
                                     </ul>
