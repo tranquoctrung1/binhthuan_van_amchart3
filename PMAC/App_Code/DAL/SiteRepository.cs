@@ -18,7 +18,7 @@ namespace PMAC.DAL
 
         public IEnumerable<t_Sites> GetSites()
         {
-            return context.t_Sites.OrderBy(s => s.SiteId).ToList();
+            return context.t_Sites.OrderBy(s => s.SiteAliasName).ToList();
         }
 
         public IEnumerable<t_Sites> GetSitesDMA()

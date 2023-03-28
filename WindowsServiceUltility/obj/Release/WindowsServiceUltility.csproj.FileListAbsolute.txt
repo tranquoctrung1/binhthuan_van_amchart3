@@ -1,1 +1,0 @@
-D:\_Projects\2014_Q3\[TAWACO]\[WEB][TAWACO]\WindowsServiceUltility\bin\Release\WindowsServiceUltility.exe.config

@@ -8,7 +8,7 @@
     <head>
         <title></title>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXcBIH-8x-fgsegv6OedGZmh7g0JZyGr0&sensor=false"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_g_l8px0DA5AV-ul2l1OvblcsagazbhU&sensor=false"></script>
         <script src="../../js/markerwithlabel.js"></script>
         <script src="../../js/ContextMenu.js"></script>
         <script src="../../js/jquery-1.7.2.min.js"></script>

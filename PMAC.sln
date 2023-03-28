@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30406.217
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PMAC", "PMAC\", "{59818693-F237-411A-B24D-46547EF1657B}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -30,13 +30,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PMAC", "PMAC\", "{59818693-
 		ProjOutputReferences = ""
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerAlarmingService", "LoggerAlarmWindowsService\LoggerAlarmingService.csproj", "{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSViaCOMPort", "SMSViaCOMPort\SMSViaCOMPort.csproj", "{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanControllServices", "VanControllServices\VanControllServices.csproj", "{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerDataWCFServices", "..\Phu Ninh\LoggerDataWCFService\LoggerDataWCFServices.csproj", "{2B654784-1E7F-401D-B724-AEDAD36693B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,22 +42,10 @@ Global
 		{59818693-F237-411A-B24D-46547EF1657B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59818693-F237-411A-B24D-46547EF1657B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{59818693-F237-411A-B24D-46547EF1657B}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{149DADA3-8B25-4FFC-B7A4-8B1DF2150228}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF1F8F6B-AFBE-4A0B-8D02-0BDC59E750A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A4ADAA7-BB06-48B4-8D07-B0EE141BD665}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2B654784-1E7F-401D-B724-AEDAD36693B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

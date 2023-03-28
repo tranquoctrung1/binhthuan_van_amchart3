@@ -27,11 +27,11 @@ public partial class Controls_ucDailyReportConsumer : System.Web.UI.UserControl
             IEnumerable<t_Sites> sites;
             if (user.Role == "consumer")
             {
-                sites = _siteBL.GetSitesByConsumerID(user.ConsumerId);
+                sites = _siteBL.GetSitesByConsumerID(user.ConsumerId).OrderBy(s => s.SiteAliasName);
             }
             else if (user.Role == "staff")
             {
-                sites = _siteBL.GetSitesByStaffId(user.StaffId);
+                sites = _siteBL.GetSitesByStaffId(user.StaffId).OrderBy(s => s.SiteAliasName);
             }
             else
             {

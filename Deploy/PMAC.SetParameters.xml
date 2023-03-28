@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <setParameter name="IIS Web Application Name" value="Default Web Site/website_deploy" />
-  <setParameter name="DBEntities-Web.config Connection String" value="metadata=res://*/App_Code.DBModel.csdl|res://*/App_Code.DBModel.ssdl|res://*/App_Code.DBModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=trung-pc;initial catalog=CHOLONWSJC;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
-  <setParameter name="DbConnectionString-Web.config Connection String" value="Data Source=trung-pc;Initial Catalog=CHOLONWSJC;Integrated Security=True" />
-</parameters>
